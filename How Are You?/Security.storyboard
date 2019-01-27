@@ -1,7 +1,93 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lne-nU-BQM">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Disclaimer View Controller-->
+        <scene sceneID="Dtn-CE-c2v">
+            <objects>
+                <viewController id="Lne-nU-BQM" customClass="DisclaimerViewController" customModule="How_Are_You_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2r1-xA-Szf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZs-p2-TBv">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZs-kc-hgm" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISCLAIMER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xU-R6-NMg">
+                                        <rect key="frame" x="111" y="75" width="98" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yk-jm-Ung">
+                                        <rect key="frame" x="8" y="131" width="304" height="310.5"/>
+                                        <string key="text">This is the Disclaimer. It might be too tall for some small devices, or it might end up being too tall for some devices when it's actually complete, so I've put it in a Scroll View for the time being. It might not need to be in a Scroll View especially if it'll only end up being a few lines of text, but we can change all of that later.
+
+If you want a newline when editing a UILabel like this one, press Alt+Return/Alt+Enter.
+
+This application is not meant to replace the advice or counseling of an actual licensed practitioner [todo: actually write this].
+
+We also have the option to save data to NSUserDefaults that keeps track of if a user has already seen this notice.
+
+Press the button below to continue.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyK-wj-FFy">
+                                        <rect key="frame" x="115.5" y="456.5" width="89" height="30"/>
+                                        <state key="normal" title="I Understand"/>
+                                        <connections>
+                                            <action selector="continueButtonPressed:" destination="Lne-nU-BQM" eventType="touchUpInside" id="k3B-3C-t32"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kyK-wj-FFy" firstAttribute="centerX" secondItem="zZs-p2-TBv" secondAttribute="centerX" id="49w-n5-hBq"/>
+                                    <constraint firstItem="6xU-R6-NMg" firstAttribute="top" secondItem="zZs-p2-TBv" secondAttribute="top" constant="75" id="6vz-At-lm9"/>
+                                    <constraint firstItem="3yk-jm-Ung" firstAttribute="centerX" secondItem="zZs-p2-TBv" secondAttribute="centerX" id="75Q-fn-0y3"/>
+                                    <constraint firstItem="fZs-kc-hgm" firstAttribute="leading" secondItem="zZs-p2-TBv" secondAttribute="leading" id="FTC-SV-ZSl"/>
+                                    <constraint firstAttribute="bottom" secondItem="fZs-kc-hgm" secondAttribute="bottom" id="TWf-WE-NlG"/>
+                                    <constraint firstItem="fZs-kc-hgm" firstAttribute="top" secondItem="zZs-p2-TBv" secondAttribute="top" id="UI9-fe-uMa"/>
+                                    <constraint firstItem="fZs-kc-hgm" firstAttribute="centerX" secondItem="zZs-p2-TBv" secondAttribute="centerX" id="abr-ai-9RU"/>
+                                    <constraint firstItem="3yk-jm-Ung" firstAttribute="top" secondItem="6xU-R6-NMg" secondAttribute="bottom" constant="35" id="akT-Ut-T4Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="fZs-kc-hgm" secondAttribute="trailing" id="bS2-oc-s3c"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="3yk-jm-Ung" secondAttribute="trailing" id="cFy-SI-XY1"/>
+                                    <constraint firstItem="kyK-wj-FFy" firstAttribute="top" secondItem="3yk-jm-Ung" secondAttribute="bottom" constant="15" id="mTp-cO-fuR"/>
+                                    <constraint firstItem="3yk-jm-Ung" firstAttribute="leading" secondItem="zZs-p2-TBv" secondAttribute="leadingMargin" id="qia-9R-3i1"/>
+                                    <constraint firstItem="6xU-R6-NMg" firstAttribute="centerX" secondItem="zZs-p2-TBv" secondAttribute="centerX" id="w7T-8h-kyh"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zZs-p2-TBv" firstAttribute="leading" secondItem="CL7-Do-oiQ" secondAttribute="leading" id="TIM-Tg-6cA"/>
+                            <constraint firstItem="CL7-Do-oiQ" firstAttribute="trailing" secondItem="zZs-p2-TBv" secondAttribute="trailing" id="Vvt-Ym-wSc"/>
+                            <constraint firstItem="fZs-kc-hgm" firstAttribute="height" secondItem="2r1-xA-Szf" secondAttribute="height" priority="250" id="lzU-mg-Qsd"/>
+                            <constraint firstItem="zZs-p2-TBv" firstAttribute="top" secondItem="CL7-Do-oiQ" secondAttribute="top" id="w1Y-Hq-lx6"/>
+                            <constraint firstItem="CL7-Do-oiQ" firstAttribute="bottom" secondItem="zZs-p2-TBv" secondAttribute="bottom" id="whT-HC-V5n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CL7-Do-oiQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="kyK-wj-FFy" id="BIw-TS-EqO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J1o-uR-vhr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="173"/>
+        </scene>
+    </scenes>
 </document>

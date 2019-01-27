@@ -13,6 +13,14 @@
 		114A249521F7C92B00731F60 /* How_Are_You_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 114A249321F7C92B00731F60 /* How_Are_You_.xcdatamodeld */; };
 		114A249721F7C92B00731F60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114A249621F7C92B00731F60 /* Assets.xcassets */; };
 		114A249A21F7C92B00731F60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114A249821F7C92B00731F60 /* LaunchScreen.storyboard */; };
+		114A24A921FCFEDC00731F60 /* Security.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114A24A821FCFEDC00731F60 /* Security.storyboard */; };
+		1199D6DB21FD61CE00F716D7 /* UIView+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199D6DA21FD61CE00F716D7 /* UIView+Convenience.swift */; };
+		1199D6DD21FD625400F716D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199D6DC21FD625400F716D7 /* Constants.swift */; };
+		1199D6DF21FD71EB00F716D7 /* HAYTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199D6DE21FD71EB00F716D7 /* HAYTabBarController.swift */; };
+		1199D6E121FD725400F716D7 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199D6E021FD725400F716D7 /* GraphViewController.swift */; };
+		1199D6E321FD726000F716D7 /* MoreResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199D6E221FD726000F716D7 /* MoreResourcesViewController.swift */; };
+		1199D6E521FD726A00F716D7 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199D6E421FD726A00F716D7 /* SurveyViewController.swift */; };
+		11D94AEE21FD5E47005CB508 /* DisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D94AED21FD5E47005CB508 /* DisclaimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		114A249621F7C92B00731F60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		114A249921F7C92B00731F60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		114A249B21F7C92B00731F60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		114A24A821FCFEDC00731F60 /* Security.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Security.storyboard; sourceTree = "<group>"; };
+		1199D6DA21FD61CE00F716D7 /* UIView+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Convenience.swift"; sourceTree = "<group>"; };
+		1199D6DC21FD625400F716D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1199D6DE21FD71EB00F716D7 /* HAYTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HAYTabBarController.swift; sourceTree = "<group>"; };
+		1199D6E021FD725400F716D7 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		1199D6E221FD726000F716D7 /* MoreResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreResourcesViewController.swift; sourceTree = "<group>"; };
+		1199D6E421FD726A00F716D7 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		11D94AED21FD5E47005CB508 /* DisclaimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,47 @@
 		114A248B21F7C92B00731F60 /* How Are You? */ = {
 			isa = PBXGroup;
 			children = (
+				114A24A321F7C94D00731F60 /* Controller */,
+				114A24A221F7C94600731F60 /* View */,
+				114A24A121F7C93900731F60 /* Model */,
 				114A248C21F7C92B00731F60 /* AppDelegate.swift */,
 				114A248E21F7C92B00731F60 /* ViewController.swift */,
 				114A249021F7C92B00731F60 /* Main.storyboard */,
+				114A24A821FCFEDC00731F60 /* Security.storyboard */,
 				114A249621F7C92B00731F60 /* Assets.xcassets */,
 				114A249821F7C92B00731F60 /* LaunchScreen.storyboard */,
 				114A249B21F7C92B00731F60 /* Info.plist */,
 				114A249321F7C92B00731F60 /* How_Are_You_.xcdatamodeld */,
 			);
 			path = "How Are You?";
+			sourceTree = "<group>";
+		};
+		114A24A121F7C93900731F60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1199D6DC21FD625400F716D7 /* Constants.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		114A24A221F7C94600731F60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1199D6DA21FD61CE00F716D7 /* UIView+Convenience.swift */,
+				1199D6E021FD725400F716D7 /* GraphViewController.swift */,
+				1199D6E221FD726000F716D7 /* MoreResourcesViewController.swift */,
+				1199D6E421FD726A00F716D7 /* SurveyViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		114A24A321F7C94D00731F60 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				11D94AED21FD5E47005CB508 /* DisclaimerViewController.swift */,
+				1199D6DE21FD71EB00F716D7 /* HAYTabBarController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +175,7 @@
 			files = (
 				114A249A21F7C92B00731F60 /* LaunchScreen.storyboard in Resources */,
 				114A249721F7C92B00731F60 /* Assets.xcassets in Resources */,
+				114A24A921FCFEDC00731F60 /* Security.storyboard in Resources */,
 				114A249221F7C92B00731F60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +188,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				114A248F21F7C92B00731F60 /* ViewController.swift in Sources */,
+				11D94AEE21FD5E47005CB508 /* DisclaimerViewController.swift in Sources */,
+				1199D6DF21FD71EB00F716D7 /* HAYTabBarController.swift in Sources */,
 				114A248D21F7C92B00731F60 /* AppDelegate.swift in Sources */,
+				1199D6E521FD726A00F716D7 /* SurveyViewController.swift in Sources */,
 				114A249521F7C92B00731F60 /* How_Are_You_.xcdatamodeld in Sources */,
+				1199D6E121FD725400F716D7 /* GraphViewController.swift in Sources */,
+				1199D6DB21FD61CE00F716D7 /* UIView+Convenience.swift in Sources */,
+				1199D6DD21FD625400F716D7 /* Constants.swift in Sources */,
+				1199D6E321FD726000F716D7 /* MoreResourcesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

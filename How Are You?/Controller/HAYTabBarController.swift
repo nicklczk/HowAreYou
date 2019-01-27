@@ -16,6 +16,7 @@ class HAYTabBarController: UITabBarController {
         // Do any additional setup after loading the view.
     }
     
+    /*In case we want to do anything special with our tab bar controller.*/
 
     /*
     // MARK: - Navigation

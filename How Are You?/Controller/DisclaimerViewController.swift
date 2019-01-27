@@ -6,4 +6,25 @@
 //  Copyright © 2019 RCOS-HowAreYou. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class DisclaimerViewController : UIViewController {
+    
+    @IBOutlet weak var continueButton: UIButton!
+    
+    @IBAction func continueButtonPressed(_ sender: Any) {
+        /*Transition to the next VC.*/
+        //Currently, this will just move us to the main storyboard.
+        //Ideally, if there was any code we wanted to run before this, we'd want to run it now.
+        
+        let initVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! HAYTabBarController
+        self.present(initVC, animated: true) {
+            //Completion closure.
+        }
+        
+        
+    }
+    
+    
+    
+}

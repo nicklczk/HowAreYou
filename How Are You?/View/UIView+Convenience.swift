@@ -6,4 +6,17 @@
 //  Copyright © 2019 RCOS-HowAreYou. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIView {
+    
+    
+    /**
+        Takes a view and rounds its corners.
+     */
+    
+    func pill(){
+        
+    }
+    
+}
