@@ -10,8 +10,11 @@ import UIKit
 
 class SurveyTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var questionNumberLabel: UILabel!
     
+    @IBOutlet weak var questionContentLabel: UILabel!
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     override func awakeFromNib() {
         super.awakeFromNib()
