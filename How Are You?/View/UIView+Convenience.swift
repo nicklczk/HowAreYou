@@ -12,11 +12,13 @@ extension UIView {
     
     
     /**
-        Takes a view and rounds its corners.
+        Takes the view and rounds its corners based on its height.
      */
-    
     func pill(){
-        
+        self.layer.cornerRadius = self.frame.height/2
+        self.clipsToBounds = true;
     }
+    
+    
     
 }
