@@ -68,10 +68,29 @@
                     <view key="view" contentMode="scaleToFill" id="Pzu-cT-kYD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pEn-Fy-MhC">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="D0t-eZ-Wqf" id="k30-9A-Ygz"/>
+                                    <outlet property="delegate" destination="D0t-eZ-Wqf" id="IJv-Tm-fsX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LUZ-cP-RxX" firstAttribute="trailing" secondItem="pEn-Fy-MhC" secondAttribute="trailing" id="Km1-dE-NrR"/>
+                            <constraint firstItem="pEn-Fy-MhC" firstAttribute="leading" secondItem="LUZ-cP-RxX" secondAttribute="leading" id="dAE-kU-HL6"/>
+                            <constraint firstItem="LUZ-cP-RxX" firstAttribute="bottom" secondItem="pEn-Fy-MhC" secondAttribute="bottom" id="sit-RN-oRW"/>
+                            <constraint firstItem="pEn-Fy-MhC" firstAttribute="top" secondItem="LUZ-cP-RxX" secondAttribute="top" id="yqg-k4-lXw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LUZ-cP-RxX"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Survey" id="mU2-Gd-VBJ"/>
+                    <connections>
+                        <outlet property="surveyTableView" destination="pEn-Fy-MhC" id="GHZ-Lg-843"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8W4-rF-xMC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

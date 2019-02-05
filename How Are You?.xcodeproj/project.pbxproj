@@ -155,6 +155,9 @@
 		114A248121F7C92B00731F60 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					SurveyTableViewCell,
+				);
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "RCOS-HowAreYou";
