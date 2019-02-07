@@ -10,10 +10,9 @@ import UIKit
 
 class SurveyViewController: UIViewController {
     
-    //I'm making this a forced optional for two reasons:
-    //1. in the future, we may want a different view controller to manipulate these questions before SurveyViewController is initialized.
-    var surveyQuestions : [String]! = ["Test 1", "Test 2", "Test 3", "Test 4", "Test 5", "Test 6", "Test 7", "Test 8", "Test 9", "Test 10"]
-    var surveyAnswers : [Int]!
+    //I'm making this a forced optional because in the future, we may want a different view controller to manipulate these questions before SurveyViewController is initialized. Having it be a forced optional allows us to leave it undefined in the initializer of this class, but the onus is still on us to make sure it's defined by the time that the code needs it.
+    
+    var survey : Survey! = Survey(withQuestions: ["Test 1", "Test 2", "Test 3", "Test 4", "Test 5", "Test 6", "Test 7", "Test 8", "Test 9", "Test 10"])
     
     @IBOutlet weak var surveyTableView: UITableView!
     
@@ -24,8 +23,6 @@ class SurveyViewController: UIViewController {
         let cellNib = UINib(nibName: "SurveyTableViewCell", bundle: nil)
         surveyTableView.register(cellNib, forCellReuseIdentifier: "SurveyTableViewCell")
         
-        //Allocate surveyAnswers to be a zeroed-out array of length equal to the length of the surveyQuestions array.
-        surveyAnswers = Array(repeating: 0, count: surveyQuestions.count)
     }
     
 
@@ -45,7 +42,7 @@ extension SurveyViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //The number of rows in the table should correspond to the number of elements in the data source.
-        return surveyQuestions.count
+        return survey.questions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,10 +58,10 @@ extension SurveyViewController : UITableViewDataSource, UITableViewDelegate{
         cell.cellIndex = indexPath.row
         
         //The question text should be what is stored in the surveyQuestions array in the indexPath.row-th element.
-        cell.questionContentLabel.text = surveyQuestions[indexPath.row]
+        cell.questionContentLabel.text = survey.questions[indexPath.row]
         
         //To maintain consistency, the cell's selected segment should correspond to the stored data. Otherwise, it'll change as we scroll, due to how the cells are reused.
-        cell.segmentedControl.selectedSegmentIndex = surveyAnswers[indexPath.row]
+        cell.segmentedControl.selectedSegmentIndex = survey.answers[indexPath.row]
         
         //Finally, the cell should know this controller.
         cell.dataSourceController = self
@@ -76,7 +73,7 @@ extension SurveyViewController : UITableViewDataSource, UITableViewDelegate{
     //This function will be called by a cell when it the user taps on a new segment in its segmented control.
     func surveyCellDidSelectNewSegment(cellIndex: Int, value: Int){
         //Just update the value in the answer array for now.
-        surveyAnswers[cellIndex] = value
+        survey.answers[cellIndex] = value
     }
     
 }

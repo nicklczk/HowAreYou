@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112120B7220C844D006347AB /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112120B6220C844D006347AB /* Survey.swift */; };
 		114A248D21F7C92B00731F60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A248C21F7C92B00731F60 /* AppDelegate.swift */; };
 		114A248F21F7C92B00731F60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A248E21F7C92B00731F60 /* ViewController.swift */; };
 		114A249221F7C92B00731F60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114A249021F7C92B00731F60 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		112120B6220C844D006347AB /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		114A248921F7C92B00731F60 /* How Are You?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How Are You?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		114A248C21F7C92B00731F60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		114A248E21F7C92B00731F60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				1199D6DC21FD625400F716D7 /* Constants.swift */,
+				112120B6220C844D006347AB /* Survey.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				114A249521F7C92B00731F60 /* How_Are_You_.xcdatamodeld in Sources */,
 				1199D6E121FD725400F716D7 /* GraphViewController.swift in Sources */,
 				1199D6DB21FD61CE00F716D7 /* UIView+Convenience.swift in Sources */,
+				112120B7220C844D006347AB /* Survey.swift in Sources */,
 				1199D6DD21FD625400F716D7 /* Constants.swift in Sources */,
 				1199D6E321FD726000F716D7 /* MoreResourcesViewController.swift in Sources */,
 			);
