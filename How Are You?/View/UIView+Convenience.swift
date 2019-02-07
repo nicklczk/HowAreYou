@@ -19,6 +19,11 @@ extension UIView {
         self.clipsToBounds = true;
     }
     
-    
+    /**
+        Calling this will allow a UIView or any subclass of it to instantiate itself from a nib easily.
+     */
+    class func fromNib<T: UIView>() -> T {
+        return Bundle.main.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
+    }
     
 }

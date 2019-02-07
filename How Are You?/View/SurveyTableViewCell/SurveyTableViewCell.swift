@@ -10,8 +10,11 @@ import UIKit
 
 class SurveyTableViewCell: UITableViewCell {
 
+    static let reuseIdentifier = "SurveyTableViewCell"
+    
     //This reference is stored so that when the segmented control is updated, the cell can tell the SurveyViewController to update its corresponding data.
-    var dataSourceController : SurveyViewController!
+    //This is basically delegation (though I haven't defined a protocol).
+    weak var surveyViewController : SurveyViewController!
     
     var cellIndex : Int!
     
@@ -37,7 +40,7 @@ class SurveyTableViewCell: UITableViewCell {
     }
     
     @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
-        dataSourceController.surveyCellDidSelectNewSegment(cellIndex: cellIndex, value: segmentedControl.selectedSegmentIndex)
+        surveyViewController.surveyCellDidSelectNewSegment(cellIndex: cellIndex, value: segmentedControl.selectedSegmentIndex)
         
     }
     

@@ -1,9 +1,11 @@
 class Survey {
     
+    let title : String
     let questions : [String] //let array because it shouldn't need to be mutable
     var answers : [Int] //var array so it can be updated
     
-    init (withQuestions: [String]){
+    init (withTitle: String, withQuestions: [String]){
+        title = withTitle
         questions = withQuestions
         answers = Array(repeating: 0, count: questions.count)
     }

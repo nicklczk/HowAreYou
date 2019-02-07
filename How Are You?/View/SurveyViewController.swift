@@ -12,7 +12,7 @@ class SurveyViewController: UIViewController {
     
     //I'm making this a forced optional because in the future, we may want a different view controller to manipulate these questions before SurveyViewController is initialized. Having it be a forced optional allows us to leave it undefined in the initializer of this class, but the onus is still on us to make sure it's defined by the time that the code needs it.
     
-    var survey : Survey! = Survey(withQuestions: ["Test 1", "Test 2", "Test 3", "Test 4", "Test 5", "Test 6", "Test 7", "Test 8", "Test 9", "Test 10"])
+    var survey : Survey! = Survey(withTitle: "Test Survey", withQuestions: ["Test 1", "Test 2", "Test 3", "Test 4", "Test 5", "Test 6", "Test 7", "Test 8", "Test 9", "Test 10"])
     
     @IBOutlet weak var surveyTableView: UITableView!
     
@@ -21,8 +21,8 @@ class SurveyViewController: UIViewController {
         
         //Register the cell nib type with the table, so it can load cells correctly.
         let cellNib = UINib(nibName: "SurveyTableViewCell", bundle: nil)
-        surveyTableView.register(cellNib, forCellReuseIdentifier: "SurveyTableViewCell")
-        
+        surveyTableView.register(cellNib, forCellReuseIdentifier: SurveyTableViewCell.reuseIdentifier)
+
     }
     
 
@@ -47,7 +47,7 @@ extension SurveyViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Attempt to cast the cell to our custom type. It must work, or else.
-        guard let cell = surveyTableView.dequeueReusableCell(withIdentifier: "SurveyTableViewCell", for: indexPath) as? SurveyTableViewCell else {
+        guard let cell = surveyTableView.dequeueReusableCell(withIdentifier: SurveyTableViewCell.reuseIdentifier, for: indexPath) as? SurveyTableViewCell else {
             fatalError("Error: SurveyTableViewCell cast failed.")
         }
         
@@ -64,16 +64,42 @@ extension SurveyViewController : UITableViewDataSource, UITableViewDelegate{
         cell.segmentedControl.selectedSegmentIndex = survey.answers[indexPath.row]
         
         //Finally, the cell should know this controller.
-        cell.dataSourceController = self
+        cell.surveyViewController = self
         
         //Return the cell.
         return cell
+    }
+    
+    //This sets the section title to what we want. Since we only have one section, this will serve as the header for the table, and will display the title.
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return survey.title
+        //This produces a somewhat-underwhelming result, so in the future we may want to create a custom view to serve as the header view instead.
+    }
+    
+    //Again, since we only have one section, we'll only have one footer.
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        
+        let footerView : SurveyTableViewFooter = .fromNib()
+
+        footerView.surveyViewController = self
+                
+        return footerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 32
     }
     
     //This function will be called by a cell when it the user taps on a new segment in its segmented control.
     func surveyCellDidSelectNewSegment(cellIndex: Int, value: Int){
         //Just update the value in the answer array for now.
         survey.answers[cellIndex] = value
+    }
+    
+    //This function will be called when the submit button is pressed.
+    func footerDidPressSubmitButton(){
+        //This just prints a line to the terminal.
+        NSLog("Submit button pressed.\n")
     }
     
 }
