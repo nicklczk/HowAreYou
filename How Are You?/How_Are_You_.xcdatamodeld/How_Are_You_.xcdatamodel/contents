@@ -4,8 +4,9 @@
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phq" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="surveyTitle" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="GraphDataPoint" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="GraphDataPoint" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>

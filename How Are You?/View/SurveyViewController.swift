@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SurveyViewController: UIViewController {
     
@@ -100,6 +101,41 @@ extension SurveyViewController : UITableViewDataSource, UITableViewDelegate{
     func footerDidPressSubmitButton(){
         //This just prints a line to the terminal.
         NSLog("Submit button pressed.\n")
+        
+        //Now, before we save, let's try getting notes from our user. In the interest of speed I'll just do this in a UIAlertController.
+        //We can change the method we get notes later, if we want.
+        let alert = UIAlertController(title: "Notes", message: "Do you have any notes you'd like to record for today?", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "Write your notes here..."
+        }
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { (_) in
+            
+            //The user pressed OK; let's now save the point with Core Data.
+            let entity = NSEntityDescription.entity(forEntityName: "GraphDataPoint", in: Constants.moc)!
+            let graphDataPoint = NSManagedObject(entity: entity, insertInto: Constants.moc)
+            
+            //The survey's name is literally the title of the survey object.
+            graphDataPoint.setValue(self.survey.title, forKey: "surveyTitle")
+            //A Date() by default is just the current date.
+            graphDataPoint.setValue(Date(), forKey: "date")
+            //The summed answers is the PHQ.
+            graphDataPoint.setValue(self.survey.answersSum, forKey: "phq")
+            //Save the input from the textField we added as the "notes" data.
+            graphDataPoint.setValue(alert.textFields![0].text, forKey: "notes")
+            
+            //Now, we actually need to explicitly save our new managed object by saving the managed object context.
+            do {
+                try Constants.moc.save()
+            } catch {
+                //If that failed, let's present a dialog box.
+                self.presentDialogBox(withTitle: "Error", withMessage: "There was an error saving the survey results. Please try again.")
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+        //If the user cancels, nothing will happen.
+        
     }
     
 }

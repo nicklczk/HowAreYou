@@ -31,6 +31,11 @@ final class Constants {
         return dateFormatter.string(from: Date())
     }
     
+    /*MOC == Managed Object Context.
+     *This is a reference we will need to use Core Data.
+     *This line of code is a bit ugly, so let's just 
+     */
+    static let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     
 }

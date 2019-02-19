@@ -17,6 +17,7 @@
 		114A249721F7C92B00731F60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114A249621F7C92B00731F60 /* Assets.xcassets */; };
 		114A249A21F7C92B00731F60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114A249821F7C92B00731F60 /* LaunchScreen.storyboard */; };
 		114A24A921FCFEDC00731F60 /* Security.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114A24A821FCFEDC00731F60 /* Security.storyboard */; };
+		11736C9F221B86C7006C04D6 /* UIViewController+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11736C9E221B86C7006C04D6 /* UIViewController+Convenience.swift */; };
 		1199D6DB21FD61CE00F716D7 /* UIView+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199D6DA21FD61CE00F716D7 /* UIView+Convenience.swift */; };
 		1199D6DD21FD625400F716D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199D6DC21FD625400F716D7 /* Constants.swift */; };
 		1199D6DF21FD71EB00F716D7 /* HAYTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199D6DE21FD71EB00F716D7 /* HAYTabBarController.swift */; };
@@ -41,6 +42,7 @@
 		114A249921F7C92B00731F60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		114A249B21F7C92B00731F60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114A24A821FCFEDC00731F60 /* Security.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Security.storyboard; sourceTree = "<group>"; };
+		11736C9E221B86C7006C04D6 /* UIViewController+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Convenience.swift"; sourceTree = "<group>"; };
 		1199D6DA21FD61CE00F716D7 /* UIView+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Convenience.swift"; sourceTree = "<group>"; };
 		1199D6DC21FD625400F716D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1199D6DE21FD71EB00F716D7 /* HAYTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HAYTabBarController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				1199D6DA21FD61CE00F716D7 /* UIView+Convenience.swift */,
+				11736C9E221B86C7006C04D6 /* UIViewController+Convenience.swift */,
 				112120B9220C8C39006347AB /* SurveyTableViewFooter */,
 				1199D6EE220108B400F716D7 /* SurveyTableViewCell */,
 				1199D6E021FD725400F716D7 /* GraphViewController.swift */,
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11736C9F221B86C7006C04D6 /* UIViewController+Convenience.swift in Sources */,
 				112120BB220C8CEC006347AB /* SurveyTableViewFooter.swift in Sources */,
 				114A248F21F7C92B00731F60 /* ViewController.swift in Sources */,
 				1199D6EC220108A400F716D7 /* SurveyTableViewCell.swift in Sources */,
