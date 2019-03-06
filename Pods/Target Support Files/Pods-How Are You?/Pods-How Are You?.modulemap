@@ -1,0 +1,6 @@
+framework module Pods_How_Are_You_ {
+  umbrella header "Pods-How Are You?-umbrella.h"
+
+  export *
+  module * { export * }
+}

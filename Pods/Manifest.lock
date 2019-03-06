@@ -1,0 +1,18 @@
+PODS:
+  - Charts (3.2.2):
+    - Charts/Core (= 3.2.2)
+  - Charts/Core (3.2.2)
+
+DEPENDENCIES:
+  - Charts
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Charts
+
+SPEC CHECKSUMS:
+  Charts: f69cf0518b6d1d62608ca504248f1bbe0b6ae77e
+
+PODFILE CHECKSUM: 0858faa0497a9ab66ed8fc469410c68967d23a34
+
+COCOAPODS: 1.6.1

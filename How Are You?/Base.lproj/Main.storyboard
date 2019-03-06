@@ -18,18 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Graph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNX-Rc-tRm">
-                                <rect key="frame" x="166" y="100" width="48" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4f-DO-j6a" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2qw-2S-7J7" firstAttribute="bottom" secondItem="F4f-DO-j6a" secondAttribute="bottom" id="CD7-d4-4O3"/>
+                            <constraint firstItem="F4f-DO-j6a" firstAttribute="leading" secondItem="2qw-2S-7J7" secondAttribute="leading" id="Wxq-CU-wbW"/>
+                            <constraint firstItem="F4f-DO-j6a" firstAttribute="top" secondItem="2qw-2S-7J7" secondAttribute="top" id="cOd-an-Yre"/>
+                            <constraint firstItem="2qw-2S-7J7" firstAttribute="trailing" secondItem="F4f-DO-j6a" secondAttribute="trailing" id="iUk-zE-tLd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2qw-2S-7J7"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Graph" id="L2d-EA-sKa"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="F4f-DO-j6a" id="doc-My-6hl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6LE-ry-hmx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
