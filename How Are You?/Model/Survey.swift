@@ -13,13 +13,21 @@ class Survey {
      number by specifying the number of strings in answerStrings[i].
      */
     
-    init (withTitle: String, withQuestions: [String]){
+    var defaultAnswerStrings : [String]
+    /*This can be changed manually; an initializer that initializes this correctly */
+    
+    
+    init (withTitle: String, withQuestions: [String], withDefaultAnswerStrings: [String]){
         title = withTitle
         questions = withQuestions
         answers = Array(repeating: 0, count: questions.count)
         answerStrings = Array<[String]?>(repeating: nil, count: questions.count)
+        defaultAnswerStrings = withDefaultAnswerStrings
     }
     
+    convenience init (withTitle: String, withQuestions: [String]){
+        self.init(withTitle: withTitle, withQuestions: withQuestions, withDefaultAnswerStrings: ["Not at all", "Several days", "Over half", "Almost every"])
+    }
     /*
      *Returns the sum of the answers array.
      *Swift has this nifty feature: calculated properties.

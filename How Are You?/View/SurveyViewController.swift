@@ -76,9 +76,8 @@ extension SurveyViewController : UITableViewDataSource, UITableViewDelegate{
         } else {
             //Reset to default.
             cell.segmentedControl.removeAllSegments()
-            let array = ["Not at all", "Several days", "Over half", "Almost every"]
-            for i in 0..<array.count {
-                cell.segmentedControl.insertSegment(withTitle: array[i], at: i, animated: false)
+            for i in 0..<survey.defaultAnswerStrings.count {
+                cell.segmentedControl.insertSegment(withTitle: survey.defaultAnswerStrings[i], at: i, animated: false)
             }
         }
         
