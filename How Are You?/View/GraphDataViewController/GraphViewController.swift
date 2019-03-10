@@ -31,11 +31,8 @@ class GraphViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        chartOptions = [
-        
-        
-        ]
-        
+        chartSetup()
+     
         // Do any additional setup after loading the view.
     }
     
@@ -88,6 +85,10 @@ class GraphViewController: UIViewController {
 
 extension GraphViewController : ChartViewDelegate {
     
+    func chartSetup(){
+        //updateChart()
+    }
+    
     func updateChart(){
         //We will fetch our data points and turn them into a frontend representation (that isn't a ManagedObject). This will make things a bit cleaner.
         var dataPoints = [FrontendGraphDataPoint]()
@@ -120,16 +121,47 @@ extension GraphViewController : ChartViewDelegate {
         } catch {
             self.presentDialogBox(withTitle: "Unknown Error", withMessage: "I hope you haven't been showering with your phone, because that could explain how you got this error; I certainly can't.")
         }
+        //If our result is empty, we should return.
+        if dataPoints.isEmpty { return }
+        
         //Now that we're done with all that junk, let's actually use what we just fetched.
     
         //Let's first make sure our data is ordered as we want it to. Ordering our data points will also make it a bit easier to set our chart's axes. We can do this because we implemented the comparator for this custom type.
         dataPoints.sort()
+        //I'm not thinking particularly hard right now, so it's possible there's a more efficient way to implement this.
         
         //Now, the date of the first one can be the start of the graph's time period and the date of the last one can be the end. We can also extend these somewhat...
+        //We still need to convert these to a [ChartDataEntry]().
         
-        //...Tired. Will work on this more tomorrow.
+        var lineChartEntries = [ChartDataEntry]()
+        //If 0 is our first point's date, then...
+        let firstDate = dataPoints.first!.date
         
+        for point in dataPoints {
+            //Get the amount of time between the first date and this date as a Double
+            let elapsedTime = Double(point.date.timeIntervalSince(firstDate))
+            //Create a new ChartDataEntry with this information and the appropriate PHQ score
+            let entry = ChartDataEntry(x: elapsedTime, y: Double(point.phq))
+            //Add the ChartDataEntry to the array
+            lineChartEntries.append(entry)
+        }
+        
+        //Now let's set the graphical information.
+        let line = LineChartDataSet(values: lineChartEntries, label: "Score")
+        //We might be able to customize the label.
+        
+        //Later on, we may want to color-code the entries. We should be able to do that.
+        //line.colors = []
+        
+        let data = LineChartData() //This finally being the object we insert into the chart...
+        data.addDataSet(line)
+        
+        lineChartView.data = data //and we set the chart view's data to the object we just prepared.
+        
+        lineChartView.chartDescription?.text = "\(dataPoints.first!.title) results"
         
     }
+    
+    
     
 }

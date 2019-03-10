@@ -31,6 +31,7 @@ class SurveyTableViewCell: UITableViewCell {
         //Rather than change it for every device, we can define it for those special-case devices here.
         //TODO: Actually implement the code that determines if a device needs the narrowed button titles.
         
+        //If questionStrings is non-nil,
         
     }
 

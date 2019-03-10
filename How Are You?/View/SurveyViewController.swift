@@ -19,6 +19,9 @@ class SurveyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //Change the answer strings for the 9th (0-indexed) survey question.
+        survey.answerStrings[9] = ["Not Difficult", "Somewhat Difficult", "Very Difficult", "Extremely Difficult"]
         
         //Register the cell nib type with the table, so it can load cells correctly.
         let cellNib = UINib(nibName: "SurveyTableViewCell", bundle: nil)
@@ -60,6 +63,14 @@ extension SurveyViewController : UITableViewDataSource, UITableViewDelegate{
         
         //The question text should be what is stored in the surveyQuestions array in the indexPath.row-th element.
         cell.questionContentLabel.text = survey.questions[indexPath.row]
+        
+        //Now, we will change the cell's segmented control based on the corresponding answerStrings array, if it's defined for this question.
+        if (survey.answerStrings[indexPath.row] != nil){
+            cell.segmentedControl.removeAllSegments()
+            for i in 0..<survey.answerStrings[indexPath.row]!.count {
+                cell.segmentedControl.insertSegment(withTitle: survey.answerStrings[indexPath.row]![i], at: i, animated: true)
+            }
+        }
         
         //To maintain consistency, the cell's selected segment should correspond to the stored data. Otherwise, it'll change as we scroll, due to how the cells are reused.
         cell.segmentedControl.selectedSegmentIndex = survey.answers[indexPath.row]
