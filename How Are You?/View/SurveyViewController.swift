@@ -13,7 +13,7 @@ class SurveyViewController: UIViewController {
     
     //I'm making this a forced optional because in the future, we may want a different view controller to manipulate these questions before SurveyViewController is initialized. Having it be a forced optional allows us to leave it undefined in the initializer of this class, but the onus is still on us to make sure it's defined by the time that the code needs it.
     
-    var survey : Survey! = Survey(withTitle: "Test Survey", withQuestions: ["Test 1", "Test 2", "Test 3", "Test 4", "Test 5", "Test 6", "Test 7", "Test 8", "Test 9", "Test 10"])
+    var survey : Survey! = Survey(withTitle: "Over the last 2 weeks how often have you been bothered by any of these problems?", withQuestions: ["Little interest or pleasure in doing things", "Feeling down, dpressed, or hopeless", "Trouble falling or staying asleep, or sleeping too much", "Feeling tired or having little energy", "Poor appetite or overeating", "Feeling bad about yourself—or that you are a failure", "Trouble concentrating on things, such as reading or watching television", "Moving, speaking so slowly that that other people have noticed—being so fidgety or restless that you have been moving around more than usual", "Thoughts that you'd be better off dead or of hurting yourself in some way", "how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"])
     
     @IBOutlet weak var surveyTableView: UITableView!
     
@@ -139,7 +139,7 @@ extension SurveyViewController : UITableViewDataSource, UITableViewDelegate{
                 try Constants.moc.save()
             } catch {
                 //If that failed, let's present a dialog box.
-                self.presentDialogBox(withTitle: "Error", withMessage: "There was an error saving the survey results. Please try again.")
+                self.presentDialogBox(withfra: "Error", withMessage: "There was an error saving the survey results. Please try again.")
             }
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
