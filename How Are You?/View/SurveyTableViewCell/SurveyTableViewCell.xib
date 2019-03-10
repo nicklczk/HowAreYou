@@ -22,7 +22,7 @@
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QxB-li-Siw">
                         <rect key="frame" x="20" y="91" width="400" height="29"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="28" id="ynt-3S-oJu"/>
+                            <constraint firstAttribute="height" constant="28" id="xr8-on-OA7"/>
                         </constraints>
                         <segments>
                             <segment title="Not at all"/>
@@ -46,7 +46,9 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDs-hK-P90">
                         <rect key="frame" x="20" y="11" width="72" height="72"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="NDs-hK-P90" secondAttribute="height" multiplier="1:1" id="Yj0-Na-GVu"/>
+                            <constraint firstAttribute="width" constant="72" id="0NC-mc-s43"/>
+                            <constraint firstAttribute="height" constant="72" id="POV-Js-iQR"/>
+                            <constraint firstAttribute="width" secondItem="NDs-hK-P90" secondAttribute="height" multiplier="1:1" priority="800" id="Yj0-Na-GVu"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="59"/>
                         <nil key="textColor"/>
