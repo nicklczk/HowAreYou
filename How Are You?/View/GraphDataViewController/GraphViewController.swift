@@ -30,25 +30,20 @@ class GraphViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         chartSetup()
-     
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //This is called before the view appears, before viewWill Appear.
-        
+
         //This needs to be cleared every time the view will appear.
         chartEntries.removeAll(keepingCapacity: true)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        //viewDidAppear is called whenever the view... appears.
         testCoreData()
         updateChart()
+  
     }
     
     func testCoreData(){
@@ -86,6 +81,8 @@ class GraphViewController: UIViewController {
 extension GraphViewController : ChartViewDelegate {
     
     func chartSetup(){
+        lineChartView.drawMarkers = true
+        lineChartView.marker = GraphPointMarkerView.fromNib()
         //updateChart()
     }
     
@@ -130,18 +127,28 @@ extension GraphViewController : ChartViewDelegate {
         dataPoints.sort()
         //I'm not thinking particularly hard right now, so it's possible there's a more efficient way to implement this.
         
+        //Now that I think about it, the sorting might not be necessary. ToDo: Test to see if we can get rid of it.
+        
         //Now, the date of the first one can be the start of the graph's time period and the date of the last one can be the end. We can also extend these somewhat...
         //We still need to convert these to a [ChartDataEntry]().
         
-        var lineChartEntries = [ChartDataEntry]()
+        var lineChartEntries = [CustomGraphDataPoint]()
         //If 0 is our first point's date, then...
         let firstDate = dataPoints.first!.date
+        
+        //Let's make a DateFormatter to help us make our date strings.
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        //If we care enough, we can eventually set .locale to change to the user's. That doesn't really matter right now, though.
         
         for point in dataPoints {
             //Get the amount of time between the first date and this date as a Double
             let elapsedTime = Double(point.date.timeIntervalSince(firstDate))
-            //Create a new ChartDataEntry with this information and the appropriate PHQ score
-            let entry = ChartDataEntry(x: elapsedTime, y: Double(point.phq))
+            //Generate the dateString from the date with our DateFormatter.
+            let dateString = dateFormatter.string(from: point.date)
+            
+            //Create a new ChartDataEntry with this information and the appropriate PHQ score and notes
+            let entry = CustomGraphDataPoint(x: elapsedTime, y: Double(point.phq), dateString: dateString, notes: point.notes)
             //Add the ChartDataEntry to the array
             lineChartEntries.append(entry)
         }
@@ -150,8 +157,15 @@ extension GraphViewController : ChartViewDelegate {
         let line = LineChartDataSet(values: lineChartEntries, label: "Score")
         //We might be able to customize the label.
         
+        //So we don't have to print out the decimal places that our cast to Double would otherwise impose,
+        //let's give line our custom number formatter.
+        line.valueFormatter = GraphValueFormatter();
+        
+        //This is customizable to a high degree - line.valueFont can be changed, for example.
+        
         //Later on, we may want to color-code the entries. We should be able to do that.
         //line.colors = []
+        
         
         let data = LineChartData() //This finally being the object we insert into the chart...
         data.addDataSet(line)
@@ -159,6 +173,22 @@ extension GraphViewController : ChartViewDelegate {
         lineChartView.data = data //and we set the chart view's data to the object we just prepared.
         
         lineChartView.chartDescription?.text = "\(dataPoints.first!.title) results"
+        
+        //Charts forces us to work with floating-point units, but we don't need floating-point anything (yet).
+        //This might be something subject to change in the future, but for now, I'll add stuff to make the
+        //chart a little more integer-friendly.
+        
+        lineChartView.leftAxis.granularity = 1.0
+        lineChartView.rightAxis.granularity = 1.0 //The left and right axes should now be granular to the nearest integer or so. (May still need testing)
+        
+        lineChartView.xAxis.drawLabelsEnabled = false //These numbers don't actually mean much to the end-user; they're just the time in seconds since the first point, and they might be confusing.
+        
+        //Now let's set the other miscellaneous graphical details here.
+        //If we're up for it, we can these sorts of things be changed by user-specified settings.
+        //I'm not going to implement that just yet.
+        lineChartView.drawGridBackgroundEnabled = false //Disable drawing that grid background.
+        lineChartView.noDataText = "There's no data here! You'll have to take a survey first."
+        
         
     }
     

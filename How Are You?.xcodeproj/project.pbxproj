@@ -18,6 +18,10 @@
 		114A249A21F7C92B00731F60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114A249821F7C92B00731F60 /* LaunchScreen.storyboard */; };
 		114A24A921FCFEDC00731F60 /* Security.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114A24A821FCFEDC00731F60 /* Security.storyboard */; };
 		11736C9F221B86C7006C04D6 /* UIViewController+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11736C9E221B86C7006C04D6 /* UIViewController+Convenience.swift */; };
+		11993C6D224160D30063EF31 /* GraphPointMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11993C6C224160D30063EF31 /* GraphPointMarkerView.swift */; };
+		11993C6F224163BE0063EF31 /* GraphValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11993C6E224163BE0063EF31 /* GraphValueFormatter.swift */; };
+		11993C72224182600063EF31 /* GraphPointMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11993C71224182600063EF31 /* GraphPointMarkerView.xib */; };
+		11993C74224189540063EF31 /* CustomGraphDataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11993C73224189530063EF31 /* CustomGraphDataPoint.swift */; };
 		1199D6DB21FD61CE00F716D7 /* UIView+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199D6DA21FD61CE00F716D7 /* UIView+Convenience.swift */; };
 		1199D6DD21FD625400F716D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199D6DC21FD625400F716D7 /* Constants.swift */; };
 		1199D6DF21FD71EB00F716D7 /* HAYTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1199D6DE21FD71EB00F716D7 /* HAYTabBarController.swift */; };
@@ -45,6 +49,10 @@
 		114A249B21F7C92B00731F60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114A24A821FCFEDC00731F60 /* Security.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Security.storyboard; sourceTree = "<group>"; };
 		11736C9E221B86C7006C04D6 /* UIViewController+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Convenience.swift"; sourceTree = "<group>"; };
+		11993C6C224160D30063EF31 /* GraphPointMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPointMarkerView.swift; sourceTree = "<group>"; };
+		11993C6E224163BE0063EF31 /* GraphValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphValueFormatter.swift; sourceTree = "<group>"; };
+		11993C71224182600063EF31 /* GraphPointMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphPointMarkerView.xib; sourceTree = "<group>"; };
+		11993C73224189530063EF31 /* CustomGraphDataPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGraphDataPoint.swift; sourceTree = "<group>"; };
 		1199D6DA21FD61CE00F716D7 /* UIView+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Convenience.swift"; sourceTree = "<group>"; };
 		1199D6DC21FD625400F716D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1199D6DE21FD71EB00F716D7 /* HAYTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HAYTabBarController.swift; sourceTree = "<group>"; };
@@ -149,6 +157,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		11993C70224182420063EF31 /* GraphPointMarkerView */ = {
+			isa = PBXGroup;
+			children = (
+				11993C6C224160D30063EF31 /* GraphPointMarkerView.swift */,
+				11993C71224182600063EF31 /* GraphPointMarkerView.xib */,
+			);
+			path = GraphPointMarkerView;
+			sourceTree = "<group>";
+		};
 		1199D6EE220108B400F716D7 /* SurveyTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				11CB26F6222FAAD400093625 /* FrontendGraphDataPoint.swift */,
+				11993C73224189530063EF31 /* CustomGraphDataPoint.swift */,
 				1199D6E021FD725400F716D7 /* GraphViewController.swift */,
+				11993C70224182420063EF31 /* GraphPointMarkerView */,
+				11993C6E224163BE0063EF31 /* GraphValueFormatter.swift */,
 			);
 			path = GraphDataViewController;
 			sourceTree = "<group>";
@@ -247,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11993C72224182600063EF31 /* GraphPointMarkerView.xib in Resources */,
 				112120BD220C8CFD006347AB /* SurveyTableViewFooter.xib in Resources */,
 				1199D6ED220108A400F716D7 /* SurveyTableViewCell.xib in Resources */,
 				114A249A21F7C92B00731F60 /* LaunchScreen.storyboard in Resources */,
@@ -315,15 +336,18 @@
 				114A248F21F7C92B00731F60 /* ViewController.swift in Sources */,
 				1199D6EC220108A400F716D7 /* SurveyTableViewCell.swift in Sources */,
 				11D94AEE21FD5E47005CB508 /* DisclaimerViewController.swift in Sources */,
+				11993C6F224163BE0063EF31 /* GraphValueFormatter.swift in Sources */,
 				1199D6DF21FD71EB00F716D7 /* HAYTabBarController.swift in Sources */,
 				114A248D21F7C92B00731F60 /* AppDelegate.swift in Sources */,
 				1199D6E521FD726A00F716D7 /* SurveyViewController.swift in Sources */,
 				114A249521F7C92B00731F60 /* How_Are_You_.xcdatamodeld in Sources */,
+				11993C74224189540063EF31 /* CustomGraphDataPoint.swift in Sources */,
 				1199D6E121FD725400F716D7 /* GraphViewController.swift in Sources */,
 				1199D6DB21FD61CE00F716D7 /* UIView+Convenience.swift in Sources */,
 				11CB26F7222FAAD400093625 /* FrontendGraphDataPoint.swift in Sources */,
 				112120B7220C844D006347AB /* Survey.swift in Sources */,
 				1199D6DD21FD625400F716D7 /* Constants.swift in Sources */,
+				11993C6D224160D30063EF31 /* GraphPointMarkerView.swift in Sources */,
 				1199D6E321FD726000F716D7 /* MoreResourcesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
