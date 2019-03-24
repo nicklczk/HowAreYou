@@ -83,6 +83,7 @@ extension GraphViewController : ChartViewDelegate {
     func chartSetup(){
         lineChartView.drawMarkers = true
         lineChartView.marker = GraphPointMarkerView.fromNib()
+        lineChartView.drawGridBackgroundEnabled = false //Disable drawing that grid background.
         //updateChart()
     }
     
