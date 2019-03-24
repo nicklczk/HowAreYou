@@ -83,7 +83,6 @@ extension GraphViewController : ChartViewDelegate {
     func chartSetup(){
         lineChartView.drawMarkers = true
         lineChartView.marker = GraphPointMarkerView.fromNib()
-        lineChartView.drawGridBackgroundEnabled = false //Disable drawing that grid background.
         //updateChart()
     }
     
@@ -187,7 +186,12 @@ extension GraphViewController : ChartViewDelegate {
         //Now let's set the other miscellaneous graphical details here.
         //If we're up for it, we can these sorts of things be changed by user-specified settings.
         //I'm not going to implement that just yet.
+        
+        lineChartView.xAxis.drawGridLinesEnabled = false
+        lineChartView.leftAxis.drawGridLinesEnabled = false
+        lineChartView.rightAxis.drawGridLinesEnabled = false
         lineChartView.drawGridBackgroundEnabled = false //Disable drawing that grid background.
+        
         lineChartView.noDataText = "There's no data here! You'll have to take a survey first."
         
         
