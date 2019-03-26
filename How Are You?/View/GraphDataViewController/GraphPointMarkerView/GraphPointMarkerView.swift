@@ -69,11 +69,8 @@ class GraphPointMarkerView: MarkerView {
         frame.size.height = dateLabel.frame.height + rawScoreLabel.frame.height + notesLabel.frame.height + 40.0
         
         //Now, update this view's width.
-        //Make it the maximum width of any given subview, plus some for the side margins.
+        //Make it the maximum width of any given subview, plus 24 for the side margins.
         frame.size.width = max(dateLabel.frame.width, max(notesLabel.frame.width, rawScoreLabel.frame.width)) + 24.0
-        
-        print(frame.width)
-        print(notesLabel.frame.width)
         
     }
     
