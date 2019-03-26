@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11183D1F224AC3C200C7B4AC /* UILabel+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11183D1E224AC3C200C7B4AC /* UILabel+Convenience.swift */; };
 		112120B7220C844D006347AB /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112120B6220C844D006347AB /* Survey.swift */; };
 		112120BB220C8CEC006347AB /* SurveyTableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112120BA220C8CEC006347AB /* SurveyTableViewFooter.swift */; };
 		112120BD220C8CFD006347AB /* SurveyTableViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112120BC220C8CFD006347AB /* SurveyTableViewFooter.xib */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11183D1E224AC3C200C7B4AC /* UILabel+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Convenience.swift"; sourceTree = "<group>"; };
 		112120B6220C844D006347AB /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		112120BA220C8CEC006347AB /* SurveyTableViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTableViewFooter.swift; sourceTree = "<group>"; };
 		112120BC220C8CFD006347AB /* SurveyTableViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyTableViewFooter.xib; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				1199D6DA21FD61CE00F716D7 /* UIView+Convenience.swift */,
+				11183D1E224AC3C200C7B4AC /* UILabel+Convenience.swift */,
 				11736C9E221B86C7006C04D6 /* UIViewController+Convenience.swift */,
 				112120B9220C8C39006347AB /* SurveyTableViewFooter */,
 				1199D6EE220108B400F716D7 /* SurveyTableViewCell */,
@@ -337,6 +340,7 @@
 				1199D6EC220108A400F716D7 /* SurveyTableViewCell.swift in Sources */,
 				11D94AEE21FD5E47005CB508 /* DisclaimerViewController.swift in Sources */,
 				11993C6F224163BE0063EF31 /* GraphValueFormatter.swift in Sources */,
+				11183D1F224AC3C200C7B4AC /* UILabel+Convenience.swift in Sources */,
 				1199D6DF21FD71EB00F716D7 /* HAYTabBarController.swift in Sources */,
 				114A248D21F7C92B00731F60 /* AppDelegate.swift in Sources */,
 				1199D6E521FD726A00F716D7 /* SurveyViewController.swift in Sources */,

@@ -26,28 +26,23 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISCLAIMER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xU-R6-NMg">
-                                        <rect key="frame" x="111" y="75" width="98" height="21"/>
+                                        <rect key="frame" x="111" y="24" width="98" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yk-jm-Ung">
-                                        <rect key="frame" x="8" y="131" width="304" height="310.5"/>
-                                        <string key="text">This is the Disclaimer. It might be too tall for some small devices, or it might end up being too tall for some devices when it's actually complete, so I've put it in a Scroll View for the time being. It might not need to be in a Scroll View especially if it'll only end up being a few lines of text, but we can change all of that later.
-
-If you want a newline when editing a UILabel like this one, press Alt+Return/Alt+Enter.
-
-This application is not meant to replace the advice or counseling of an actual licensed practitioner [todo: actually write this].
-
-We also have the option to save data to NSUserDefaults that keeps track of if a user has already seen this notice.
-
-Press the button below to continue.</string>
+                                        <rect key="frame" x="8" y="69" width="304" height="403.5"/>
+                                        <mutableString key="text">It is important to understand that any score you get must be taken in the context of your life and environment. Just because someone scores relatively high or low does not necessarily mean that they suffer from depression. The PHQ-9 which this application uses is one of many tools commonly used by clinicians to help provide insight when used in conjunction with proper training and other assessments. Most clinicians do not rely on any one assessment because each individual is much more than a handful of proxy measures. 
+That being said, if your score has surprised or concerned you, first it is important that your score is not you. Even if you are suffering from upsetting thoughts and emotions associated with depression you will be ok as you work through this part of your life. Second, there are a lot of good technologies, both backed by evidence and readily available in both self-help and therapist-client methods. 
+And to be clear, I am not a licensed therapist. I cannot diagnose, nor offer aid past encouraging you to talk to a therapist if you are worried or suffering from depression. 
+</mutableString>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyK-wj-FFy">
-                                        <rect key="frame" x="115.5" y="456.5" width="89" height="30"/>
+                                        <rect key="frame" x="115.5" y="487.5" width="89" height="30"/>
                                         <state key="normal" title="I Understand"/>
                                         <connections>
                                             <action selector="continueButtonPressed:" destination="Lne-nU-BQM" eventType="touchUpInside" id="k3B-3C-t32"/>
@@ -56,13 +51,13 @@ Press the button below to continue.</string>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="kyK-wj-FFy" firstAttribute="centerX" secondItem="zZs-p2-TBv" secondAttribute="centerX" id="49w-n5-hBq"/>
-                                    <constraint firstItem="6xU-R6-NMg" firstAttribute="top" secondItem="zZs-p2-TBv" secondAttribute="top" constant="75" id="6vz-At-lm9"/>
+                                    <constraint firstItem="6xU-R6-NMg" firstAttribute="top" secondItem="zZs-p2-TBv" secondAttribute="top" constant="24" id="6vz-At-lm9"/>
                                     <constraint firstItem="3yk-jm-Ung" firstAttribute="centerX" secondItem="zZs-p2-TBv" secondAttribute="centerX" id="75Q-fn-0y3"/>
                                     <constraint firstItem="fZs-kc-hgm" firstAttribute="leading" secondItem="zZs-p2-TBv" secondAttribute="leading" id="FTC-SV-ZSl"/>
                                     <constraint firstAttribute="bottom" secondItem="fZs-kc-hgm" secondAttribute="bottom" id="TWf-WE-NlG"/>
                                     <constraint firstItem="fZs-kc-hgm" firstAttribute="top" secondItem="zZs-p2-TBv" secondAttribute="top" id="UI9-fe-uMa"/>
                                     <constraint firstItem="fZs-kc-hgm" firstAttribute="centerX" secondItem="zZs-p2-TBv" secondAttribute="centerX" id="abr-ai-9RU"/>
-                                    <constraint firstItem="3yk-jm-Ung" firstAttribute="top" secondItem="6xU-R6-NMg" secondAttribute="bottom" constant="35" id="akT-Ut-T4Q"/>
+                                    <constraint firstItem="3yk-jm-Ung" firstAttribute="top" secondItem="6xU-R6-NMg" secondAttribute="bottom" constant="24" id="akT-Ut-T4Q"/>
                                     <constraint firstAttribute="trailing" secondItem="fZs-kc-hgm" secondAttribute="trailing" id="bS2-oc-s3c"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="3yk-jm-Ung" secondAttribute="trailing" id="cFy-SI-XY1"/>
                                     <constraint firstItem="kyK-wj-FFy" firstAttribute="top" secondItem="3yk-jm-Ung" secondAttribute="bottom" constant="15" id="mTp-cO-fuR"/>

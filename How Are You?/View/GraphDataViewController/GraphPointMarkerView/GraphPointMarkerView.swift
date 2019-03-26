@@ -24,8 +24,8 @@ class GraphPointMarkerView: MarkerView {
         let view = Bundle.main.loadNibNamed(String(describing: GraphPointMarkerView.self), owner: nil, options: nil)![0] as! GraphPointMarkerView
         
         //Round the corners.
-        view.layer.cornerRadius = 15
-        view.clipsToBounds = true;
+        view.layer.cornerRadius = 12
+        view.clipsToBounds = true
        
         //Draw the border.
         view.layer.borderColor = UIColor.gray.cgColor
@@ -35,13 +35,13 @@ class GraphPointMarkerView: MarkerView {
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOffset = CGSize(width: 4, height: 4)
         
-        
         //Eventually, we will want to add a method that prevents the view from ending up offscreen by calculating its x and y offsets more carefully.
+        
+        
         
         return view
     }
     
-
     //Refresh the content; i.e update it.
     override func refreshContent(entry: ChartDataEntry, highlight: Highlight) {
         guard let point = entry as? CustomGraphDataPoint else {
@@ -52,6 +52,28 @@ class GraphPointMarkerView: MarkerView {
         dateLabel.text = point.dateString
         rawScoreLabel.text = String(Int(point.y))
         notesLabel.text = point.notes
+        
+        //Change the height of the notes label to be as small as possible given the content.
+        //No other label will be multiple lines, so they don't need this line here.
+        notesLabel.heightToContent()
+        
+        //This adjusts the widths of each label to be the minimum possible.
+        dateLabel.widthToContent()
+        rawScoreLabel.widthToContent() //Unlikely that this matters, but I'll put it here for completeness's sake.
+        notesLabel.widthToContent()
+        
+        //Now that the subviews have had their sizes made as small as possible, we can make the marker's overall size as small as possible.
+
+        //Now, update this view's height.
+        //Top margin size of 12 + height of date label + margin of 8 + score label height + margin of 8 + notes label height + margin of 12
+        frame.size.height = dateLabel.frame.height + rawScoreLabel.frame.height + notesLabel.frame.height + 40.0
+        
+        //Now, update this view's width.
+        //Make it the maximum width of any given subview, plus some for the side margins.
+        frame.size.width = max(dateLabel.frame.width, max(notesLabel.frame.width, rawScoreLabel.frame.width)) + 24.0
+        
+        print(frame.width)
+        print(notesLabel.frame.width)
         
     }
     
