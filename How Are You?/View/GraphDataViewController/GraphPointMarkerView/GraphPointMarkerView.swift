@@ -77,19 +77,21 @@ class GraphPointMarkerView: MarkerView {
     override func offsetForDrawing(atPoint point: CGPoint) -> CGPoint {
         var newOffset = CGPoint(x: 0, y: 0)
         
-        if (point.x + self.frame.maxX > UIScreen.main.bounds.maxX){
-            newOffset.x = -(self.frame.width)
+        //15 is the axis margin
+        if (point.x + self.frame.maxX > UIScreen.main.bounds.maxX - 15.0){
+            newOffset.x = -(point.x + self.frame.maxX - (UIScreen.main.bounds.maxX - 15.0))
         }
         
-        //Generally, a tab bar controller's height is 49; I'll add a bit for an extra margin.
+        //I thought this margin should have been 49, but evidently it should be 70.
         //Hardcoding this feels strange, but for now, we'll keep it here.
-        if (point.y + self.frame.maxY > UIScreen.main.bounds.maxY - (62.0)){
-            newOffset.y = -(self.frame.height) //To do: make this less granular
+        if (point.y + self.frame.maxY > UIScreen.main.bounds.maxY - (70.0)){
+            newOffset.y = -(point.y + self.frame.maxY - (UIScreen.main.bounds.maxY - 70.0))
         }
+        //If we made changes, let's return our modified offset.
         if (newOffset.x != 0 || newOffset.y != 0) {
             return newOffset
-            
         }
+        //If we made no changes, we want to return self.offset, as recommended by the documentation for the Charts API
         return (self.offset)
         
     }
