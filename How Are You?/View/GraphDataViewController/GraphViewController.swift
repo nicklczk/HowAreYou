@@ -38,7 +38,7 @@ class GraphViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //This is called before the view appears, before viewWill Appear.
-
+        
         //This needs to be cleared every time the view will appear.
         chartEntries.removeAll(keepingCapacity: true)
         testCoreData()
@@ -123,6 +123,9 @@ extension GraphViewController : ChartViewDelegate {
         
         //Now that we're done with all that junk, let's actually use what we just fetched.
     
+        //Potentially: set the navigation controller's title (the title bar) properly.
+        //navigationController?.title = "\(dataPoints.first!.title) Score Graph"
+        
         //Let's first make sure our data is ordered as we want it to. Ordering our data points will also make it a bit easier to set our chart's axes. We can do this because we implemented the comparator for this custom type.
         dataPoints.sort()
         //I'm not thinking particularly hard right now, so it's possible there's a more efficient way to implement this.
