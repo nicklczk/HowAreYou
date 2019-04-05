@@ -12,13 +12,13 @@
 		112120BB220C8CEC006347AB /* SurveyTableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112120BA220C8CEC006347AB /* SurveyTableViewFooter.swift */; };
 		112120BD220C8CFD006347AB /* SurveyTableViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112120BC220C8CFD006347AB /* SurveyTableViewFooter.xib */; };
 		114A248D21F7C92B00731F60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A248C21F7C92B00731F60 /* AppDelegate.swift */; };
-		114A248F21F7C92B00731F60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A248E21F7C92B00731F60 /* ViewController.swift */; };
 		114A249221F7C92B00731F60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114A249021F7C92B00731F60 /* Main.storyboard */; };
 		114A249521F7C92B00731F60 /* How_Are_You_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 114A249321F7C92B00731F60 /* How_Are_You_.xcdatamodeld */; };
 		114A249721F7C92B00731F60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114A249621F7C92B00731F60 /* Assets.xcassets */; };
 		114A249A21F7C92B00731F60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114A249821F7C92B00731F60 /* LaunchScreen.storyboard */; };
 		114A24A921FCFEDC00731F60 /* Security.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114A24A821FCFEDC00731F60 /* Security.storyboard */; };
 		11736C9F221B86C7006C04D6 /* UIViewController+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11736C9E221B86C7006C04D6 /* UIViewController+Convenience.swift */; };
+		118D761D22580215009FEDD2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D761C22580215009FEDD2 /* SettingsViewController.swift */; };
 		11993C6D224160D30063EF31 /* GraphPointMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11993C6C224160D30063EF31 /* GraphPointMarkerView.swift */; };
 		11993C6F224163BE0063EF31 /* GraphValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11993C6E224163BE0063EF31 /* GraphValueFormatter.swift */; };
 		11993C72224182600063EF31 /* GraphPointMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11993C71224182600063EF31 /* GraphPointMarkerView.xib */; };
@@ -43,7 +43,6 @@
 		112120BC220C8CFD006347AB /* SurveyTableViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyTableViewFooter.xib; sourceTree = "<group>"; };
 		114A248921F7C92B00731F60 /* How Are You?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How Are You?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		114A248C21F7C92B00731F60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		114A248E21F7C92B00731F60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		114A249121F7C92B00731F60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		114A249421F7C92B00731F60 /* How_Are_You_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = How_Are_You_.xcdatamodel; sourceTree = "<group>"; };
 		114A249621F7C92B00731F60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		114A249B21F7C92B00731F60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114A24A821FCFEDC00731F60 /* Security.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Security.storyboard; sourceTree = "<group>"; };
 		11736C9E221B86C7006C04D6 /* UIViewController+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Convenience.swift"; sourceTree = "<group>"; };
+		118D761C22580215009FEDD2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		11993C6C224160D30063EF31 /* GraphPointMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPointMarkerView.swift; sourceTree = "<group>"; };
 		11993C6E224163BE0063EF31 /* GraphValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphValueFormatter.swift; sourceTree = "<group>"; };
 		11993C71224182600063EF31 /* GraphPointMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphPointMarkerView.xib; sourceTree = "<group>"; };
@@ -116,8 +116,8 @@
 				114A24A221F7C94600731F60 /* View */,
 				114A24A121F7C93900731F60 /* Model */,
 				114A248C21F7C92B00731F60 /* AppDelegate.swift */,
-				114A248E21F7C92B00731F60 /* ViewController.swift */,
 				114A249021F7C92B00731F60 /* Main.storyboard */,
+				118D761C22580215009FEDD2 /* SettingsViewController.swift */,
 				114A24A821FCFEDC00731F60 /* Security.storyboard */,
 				114A249621F7C92B00731F60 /* Assets.xcassets */,
 				114A249821F7C92B00731F60 /* LaunchScreen.storyboard */,
@@ -336,7 +336,7 @@
 			files = (
 				11736C9F221B86C7006C04D6 /* UIViewController+Convenience.swift in Sources */,
 				112120BB220C8CEC006347AB /* SurveyTableViewFooter.swift in Sources */,
-				114A248F21F7C92B00731F60 /* ViewController.swift in Sources */,
+				118D761D22580215009FEDD2 /* SettingsViewController.swift in Sources */,
 				1199D6EC220108A400F716D7 /* SurveyTableViewCell.swift in Sources */,
 				11D94AEE21FD5E47005CB508 /* DisclaimerViewController.swift in Sources */,
 				11993C6F224163BE0063EF31 /* GraphValueFormatter.swift in Sources */,

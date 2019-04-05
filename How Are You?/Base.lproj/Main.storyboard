@@ -13,7 +13,7 @@
         <!--Settings-->
         <scene sceneID="nG5-6g-neN">
             <objects>
-                <viewController title="Settings" id="1t3-gM-Ta8" sceneMemberID="viewController">
+                <viewController title="Settings" id="1t3-gM-Ta8" customClass="SettingsViewController" customModule="How_Are_You_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dIi-bp-gF0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0y-kl-K4L" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tte-W1-wCb" userLabel="Line Color Setting">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tte-W1-wCb" userLabel="Line Color Setting">
                                                 <rect key="frame" x="16" y="16" width="343" height="38"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line Color Hue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIe-ca-iz3">
@@ -36,12 +36,18 @@
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="180" minValue="0.0" maxValue="360" translatesAutoresizingMaskIntoConstraints="NO" id="e7x-wC-QWM">
                                                         <rect key="frame" x="165" y="4" width="176" height="31"/>
                                                     </slider>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="705-1x-SGf">
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="705-1x-SGf">
                                                         <rect key="frame" x="129" y="4" width="30" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="705-1x-SGf" secondAttribute="height" multiplier="1:1" id="YHo-ER-miq"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,8 +63,14 @@
                                                     <constraint firstItem="e7x-wC-QWM" firstAttribute="top" secondItem="bIe-ca-iz3" secondAttribute="top" id="lhW-jd-swx"/>
                                                     <constraint firstItem="e7x-wC-QWM" firstAttribute="bottom" secondItem="bIe-ca-iz3" secondAttribute="bottom" id="nRK-G8-Vzw"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFi-rv-nyD">
+                                            <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFi-rv-nyD">
                                                 <rect key="frame" x="16" y="174" width="343" height="38"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AE1-D6-GvS">
@@ -75,8 +87,14 @@
                                                     <constraint firstAttribute="bottom" secondItem="AE1-D6-GvS" secondAttribute="bottom" constant="4" id="Iaz-qK-rQ9"/>
                                                     <constraint firstItem="AE1-D6-GvS" firstAttribute="top" secondItem="rFi-rv-nyD" secondAttribute="top" constant="4" id="bgW-r2-1aX"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBF-hf-a9X">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBF-hf-a9X">
                                                 <rect key="frame" x="16" y="244" width="343" height="38"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoR-vx-Bcm">
@@ -84,6 +102,9 @@
                                                         <state key="normal" title="Delete All Data">
                                                             <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="deleteAllDataButtonPressed:" destination="1t3-gM-Ta8" eventType="touchUpInside" id="YZT-z0-Xk9"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,6 +114,12 @@
                                                     <constraint firstItem="yoR-vx-Bcm" firstAttribute="centerX" secondItem="UBF-hf-a9X" secondAttribute="centerX" id="SYa-nJ-VSb"/>
                                                     <constraint firstItem="yoR-vx-Bcm" firstAttribute="centerY" secondItem="UBF-hf-a9X" secondAttribute="centerY" id="Vfb-9A-WfU"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,6 +155,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hl1-1W-Vk7"/>
                     </view>
+                    <connections>
+                        <outlet property="colorHueView" destination="705-1x-SGf" id="3Rv-gu-47w"/>
+                        <outlet property="colorViewSlider" destination="e7x-wC-QWM" id="EpF-zt-NdB"/>
+                        <outlet property="deleteAllDataButton" destination="yoR-vx-Bcm" id="2nh-E3-AAk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yux-ul-FAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
