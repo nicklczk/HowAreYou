@@ -19,23 +19,15 @@ import UIKit
 final class Constants {
     // classes can't be static, but values can be.
     
-    // This is just the sort of thing that would make sense here.
-    
-    static let exampleVariable : UIColor = .black
-    
-    static var exampleCalculatedVariable : String {
-        //Returns the current date and time as a string.
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .long
-        dateFormatter.timeStyle = .long
-        return dateFormatter.string(from: Date())
-    }
-    
     /*MOC == Managed Object Context.
      *This is a reference we will need to use Core Data.
      *This line of code is a bit ugly, so let's just 
      */
     static let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    static var userLineColor : UIColor {
+        let hue = CGFloat(UserDefaults.standard.float(forKey: "savedColorHue")) //Should return 0 if it doesn't exist.
+        return UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
+    }
     
 }

@@ -62,6 +62,17 @@ class GraphPointMarkerView: MarkerView {
         rawScoreLabel.widthToContent() //Unlikely that this matters, but I'll put it here for completeness's sake.
         notesLabel.widthToContent()
         
+        //If the notes label is super-wide for some reason still, set its width to a static 260.
+        if (notesLabel.frame.width > 200){
+            notesLabel.frame.size.width = 200
+            notesLabel.lineBreakMode = .byWordWrapping
+        }
+        
+        //If the notes label is super-tall for some reason still, try resizing it again.
+        if (notesLabel.frame.height > notesLabel.frame.width){
+            notesLabel.heightToContent()
+        }
+        
         //Now that the subviews have had their sizes made as small as possible, we can make the marker's overall size as small as possible.
 
         //Now, update this view's height.
@@ -77,15 +88,15 @@ class GraphPointMarkerView: MarkerView {
     override func offsetForDrawing(atPoint point: CGPoint) -> CGPoint {
         var newOffset = CGPoint(x: 0, y: 0)
         
-        //15 is the axis margin
+        //15 is the axis margin, from what I can tell.
         if (point.x + self.frame.maxX > UIScreen.main.bounds.maxX - 15.0){
             newOffset.x = -(point.x + self.frame.maxX - (UIScreen.main.bounds.maxX - 15.0))
         }
         
-        //I thought this margin should have been 49, but evidently it should be 70.
-        //Hardcoding this feels strange, but for now, we'll keep it here.
-        if (point.y + self.frame.maxY > UIScreen.main.bounds.maxY - (70.0)){
-            newOffset.y = -(point.y + self.frame.maxY - (UIScreen.main.bounds.maxY - 70.0))
+        let tabBarHeight = (HAYTabBarController.instance!.tabBar.frame.height)
+        
+        if (point.y + self.frame.maxY > UIScreen.main.bounds.maxY - (tabBarHeight + 60)){
+            newOffset.y = -(point.y + self.frame.maxY - (UIScreen.main.bounds.maxY - (tabBarHeight + 60)))
         }
         //If we made changes, let's return our modified offset.
         if (newOffset.x != 0 || newOffset.y != 0) {

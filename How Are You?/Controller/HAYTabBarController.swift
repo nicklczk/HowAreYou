@@ -10,11 +10,16 @@ import UIKit
 
 class HAYTabBarController: UITabBarController {
 
+    static var instance : HAYTabBarController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        HAYTabBarController.instance = self //This should only happen once.
+        
         // Do any additional setup after loading the view.
     }
+
     
     /*In case we want to do anything special with our tab bar controller.*/
 

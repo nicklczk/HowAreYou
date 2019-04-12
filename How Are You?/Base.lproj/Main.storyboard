@@ -33,8 +33,11 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="180" minValue="0.0" maxValue="360" translatesAutoresizingMaskIntoConstraints="NO" id="e7x-wC-QWM">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="e7x-wC-QWM">
                                                         <rect key="frame" x="165" y="4" width="176" height="31"/>
+                                                        <connections>
+                                                            <action selector="colorSliderValueChanged:" destination="1t3-gM-Ta8" eventType="valueChanged" id="Wdh-ko-wl5"/>
+                                                        </connections>
                                                     </slider>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="705-1x-SGf">
                                                         <rect key="frame" x="129" y="4" width="30" height="30"/>
@@ -98,8 +101,8 @@
                                                 <rect key="frame" x="16" y="244" width="343" height="38"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoR-vx-Bcm">
-                                                        <rect key="frame" x="120.5" y="4" width="102" height="30"/>
-                                                        <state key="normal" title="Delete All Data">
+                                                        <rect key="frame" x="72" y="4" width="199" height="30"/>
+                                                        <state key="normal" title="Delete All Saved Survey Data">
                                                             <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
@@ -113,6 +116,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="yoR-vx-Bcm" secondAttribute="bottom" constant="4" id="NJd-JY-5ZW"/>
                                                     <constraint firstItem="yoR-vx-Bcm" firstAttribute="centerX" secondItem="UBF-hf-a9X" secondAttribute="centerX" id="SYa-nJ-VSb"/>
                                                     <constraint firstItem="yoR-vx-Bcm" firstAttribute="centerY" secondItem="UBF-hf-a9X" secondAttribute="centerY" id="Vfb-9A-WfU"/>
+                                                    <constraint firstAttribute="height" constant="38" id="dwv-oa-WmX"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>

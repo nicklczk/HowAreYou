@@ -40,10 +40,9 @@ class GraphViewController: UIViewController {
         //This is called before the view appears, before viewWill Appear.
         
         //This needs to be cleared every time the view will appear.
-        chartEntries.removeAll(keepingCapacity: true)
-        testCoreData()
+        chartEntries.removeAll()
+        //testCoreData()
         updateChart()
-  
     }
     
     func testCoreData(){
@@ -88,6 +87,8 @@ extension GraphViewController : ChartViewDelegate {
     
     func updateChart(){
         //We will fetch our data points and turn them into a frontend representation (that isn't a ManagedObject). This will make things a bit cleaner.
+        
+        chartEntries.removeAll()
         var dataPoints = [FrontendGraphDataPoint]()
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "GraphDataPoint")
@@ -118,8 +119,11 @@ extension GraphViewController : ChartViewDelegate {
         } catch {
             self.presentDialogBox(withTitle: "Unknown Error", withMessage: "I hope you haven't been showering with your phone, because that could explain how you got this error; I certainly can't.")
         }
-        //If our result is empty, we should return.
-        if dataPoints.isEmpty { return }
+        //If our result is empty, we should delete the chart view's data and return.
+        if dataPoints.isEmpty {
+            lineChartView.data = nil
+            return
+        }
         
         //Now that we're done with all that junk, let's actually use what we just fetched.
     
@@ -169,6 +173,11 @@ extension GraphViewController : ChartViewDelegate {
         //Later on, we may want to color-code the entries. We should be able to do that.
         //line.colors = []
         
+        //This sets the line's fill color to the user's chosen color.
+        line.fillColor = Constants.userLineColor
+        line.colors = [Constants.userLineColor]
+        
+        line.circleColors = [Constants.userLineColor] //We'd probably change this if we implement color-coding, if I had to guess.
         
         let data = LineChartData() //This finally being the object we insert into the chart...
         data.addDataSet(line)
