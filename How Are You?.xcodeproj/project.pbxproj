@@ -19,6 +19,7 @@
 		114A24A921FCFEDC00731F60 /* Security.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114A24A821FCFEDC00731F60 /* Security.storyboard */; };
 		11736C9F221B86C7006C04D6 /* UIViewController+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11736C9E221B86C7006C04D6 /* UIViewController+Convenience.swift */; };
 		118D761D22580215009FEDD2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D761C22580215009FEDD2 /* SettingsViewController.swift */; };
+		118D761F2263AEA5009FEDD2 /* AboutHAYViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D761E2263AEA5009FEDD2 /* AboutHAYViewController.swift */; };
 		11993C6D224160D30063EF31 /* GraphPointMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11993C6C224160D30063EF31 /* GraphPointMarkerView.swift */; };
 		11993C6F224163BE0063EF31 /* GraphValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11993C6E224163BE0063EF31 /* GraphValueFormatter.swift */; };
 		11993C72224182600063EF31 /* GraphPointMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11993C71224182600063EF31 /* GraphPointMarkerView.xib */; };
@@ -51,6 +52,7 @@
 		114A24A821FCFEDC00731F60 /* Security.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Security.storyboard; sourceTree = "<group>"; };
 		11736C9E221B86C7006C04D6 /* UIViewController+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Convenience.swift"; sourceTree = "<group>"; };
 		118D761C22580215009FEDD2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		118D761E2263AEA5009FEDD2 /* AboutHAYViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHAYViewController.swift; sourceTree = "<group>"; };
 		11993C6C224160D30063EF31 /* GraphPointMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPointMarkerView.swift; sourceTree = "<group>"; };
 		11993C6E224163BE0063EF31 /* GraphValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphValueFormatter.swift; sourceTree = "<group>"; };
 		11993C71224182600063EF31 /* GraphPointMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphPointMarkerView.xib; sourceTree = "<group>"; };
@@ -117,7 +119,6 @@
 				114A24A121F7C93900731F60 /* Model */,
 				114A248C21F7C92B00731F60 /* AppDelegate.swift */,
 				114A249021F7C92B00731F60 /* Main.storyboard */,
-				118D761C22580215009FEDD2 /* SettingsViewController.swift */,
 				114A24A821FCFEDC00731F60 /* Security.storyboard */,
 				114A249621F7C92B00731F60 /* Assets.xcassets */,
 				114A249821F7C92B00731F60 /* LaunchScreen.storyboard */,
@@ -154,6 +155,8 @@
 		114A24A321F7C94D00731F60 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				118D761C22580215009FEDD2 /* SettingsViewController.swift */,
+				118D761E2263AEA5009FEDD2 /* AboutHAYViewController.swift */,
 				11D94AED21FD5E47005CB508 /* DisclaimerViewController.swift */,
 				1199D6DE21FD71EB00F716D7 /* HAYTabBarController.swift */,
 			);
@@ -337,6 +340,7 @@
 				11736C9F221B86C7006C04D6 /* UIViewController+Convenience.swift in Sources */,
 				112120BB220C8CEC006347AB /* SurveyTableViewFooter.swift in Sources */,
 				118D761D22580215009FEDD2 /* SettingsViewController.swift in Sources */,
+				118D761F2263AEA5009FEDD2 /* AboutHAYViewController.swift in Sources */,
 				1199D6EC220108A400F716D7 /* SurveyTableViewCell.swift in Sources */,
 				11D94AEE21FD5E47005CB508 /* DisclaimerViewController.swift in Sources */,
 				11993C6F224163BE0063EF31 /* GraphValueFormatter.swift in Sources */,
