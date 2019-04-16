@@ -306,27 +306,72 @@
         <scene sceneID="0QW-oq-obb">
             <objects>
                 <viewController id="Sdz-4j-huJ" userLabel="More Resources" customClass="MoreResourcesViewController" customModule="How_Are_You_" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XhZ-Xo-8Pm">
+                    <view key="view" contentMode="scaleToFill" id="GpH-mK-Ao2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More Resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wul-1G-8jo">
-                                <rect key="frame" x="126" y="77" width="124" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SkO-OO-j8f">
+                                <rect key="frame" x="0.0" y="10" width="320" height="548"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTy-GJ-FFG" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="499"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieM-LF-dSv">
+                                                <rect key="frame" x="98" y="16" width="124" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPM-T8-KbO">
+                                                <rect key="frame" x="8" y="72" width="304" height="404"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="404" id="byZ-60-CJI"/>
+                                                </constraints>
+                                                <mutableString key="text">It is important to understand that any score you get must be taken in the context of your life and environment. Just because someone scores relatively high or low does not necessarily mean that they suffer from depression. The PHQ-9 which this application uses is one of many tools commonly used by clinicians to help provide insight when used in conjunction with proper training and other assessments. Most clinicians do not rely on any one assessment because each individual is much more than a handful of proxy measures. 
+That being said, if your score has surprised or concerned you, first it is important that your score is not you. Even if you are suffering from upsetting thoughts and emotions associated with depression you will be ok as you work through this part of your life. Second, there are a lot of good technologies, both backed by evidence and readily available in both self-help and therapist-client methods. 
+One of the best things you can do if you are worried you are suffering from depression is to talk to a licensed therapist. Talk to them about cognitive behavioral therapy (CBT), dialectical behavior therapy (DBT),  and acceptance and commitment therapy (ACT).
+CBT focuses on identify and changing unhealthy and unhelpful thought patterns and changing behaviors which are associated with the negative thoughts and is most effective at treatment of things like anxiety. DBT aims to validate current thought patterns while coaching patients to change unhealthy behaviors. This form of treatment is best used for those with suicidal thoughts. And ACT is a type of therapy that works to accept thoughts and emotions without judgment by separating yourself from what you think. Any of these type of therapy can be used by a therapist to help you overcome any of your challenges. 
+That being said, therapy is not always within the economic range of everyone, so if that is the case there are a lot of free options available to those who need help. Sites like Aunt Bertha and 2-1-1 can be used to locate in-patient mental healthcare providers in your area and free sites like ACT Mindfully can also be used. Apps like Headspace and Calm also practice mindfulness meditation which can be useful to those who struggle with anxiety and depression. 
+Finally, if you are in crisis or having suicidal thoughts there is the 24 hour suicide hotline at 1-800-273-TALK and the Crisis Text Line by texting HOME to 741741. 
+And to be clear, I am not a licensed therapist. I cannot diagnose, nor offer aid past encouraging you to talk to a therapist if you are worried or suffering from depression. 
+</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ieM-LF-dSv" firstAttribute="top" secondItem="TTy-GJ-FFG" secondAttribute="top" constant="16" id="ePb-vz-wEV"/>
+                                            <constraint firstItem="ieM-LF-dSv" firstAttribute="centerX" secondItem="TTy-GJ-FFG" secondAttribute="centerX" id="pIP-uL-Zei"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TTy-GJ-FFG" firstAttribute="top" secondItem="SkO-OO-j8f" secondAttribute="top" id="99y-9V-gze"/>
+                                    <constraint firstAttribute="trailing" secondItem="TTy-GJ-FFG" secondAttribute="trailing" id="LdO-rR-8JW"/>
+                                    <constraint firstAttribute="bottom" secondItem="TTy-GJ-FFG" secondAttribute="bottom" id="Nl0-5v-1kL"/>
+                                    <constraint firstItem="TTy-GJ-FFG" firstAttribute="centerX" secondItem="SkO-OO-j8f" secondAttribute="centerX" id="UVs-rE-wx9"/>
+                                    <constraint firstItem="TTy-GJ-FFG" firstAttribute="leading" secondItem="SkO-OO-j8f" secondAttribute="leading" id="wz5-Vl-BTx"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="9wb-Rc-mWL"/>
+                        <constraints>
+                            <constraint firstItem="SkO-OO-j8f" firstAttribute="trailing" secondItem="62t-qD-kZH" secondAttribute="trailing" id="Xug-JH-Vdd"/>
+                            <constraint firstItem="TTy-GJ-FFG" firstAttribute="height" secondItem="62t-qD-kZH" secondAttribute="height" id="iZh-zK-lWU"/>
+                            <constraint firstItem="SkO-OO-j8f" firstAttribute="centerY" secondItem="GpH-mK-Ao2" secondAttribute="centerY" id="k6a-JR-Kho"/>
+                            <constraint firstItem="SkO-OO-j8f" firstAttribute="leading" secondItem="62t-qD-kZH" secondAttribute="leading" id="sIv-XC-N9n"/>
+                            <constraint firstItem="SkO-OO-j8f" firstAttribute="top" secondItem="GpH-mK-Ao2" secondAttribute="topMargin" constant="-10" id="wcP-Wp-OsQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="62t-qD-kZH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="More" image="More Resources" selectedImage="More Resources Filled" id="DCj-1A-Hzg" userLabel="More Resources"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo8-dh-aFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="382" y="889"/>
+            <point key="canvasLocation" x="380.625" y="888.38028169014081"/>
         </scene>
         <!--Survey-->
         <scene sceneID="PKv-hN-hkQ">

@@ -33,10 +33,10 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yk-jm-Ung">
                                         <rect key="frame" x="8" y="69" width="304" height="403.5"/>
-                                        <mutableString key="text">It is important to understand that any score you get must be taken in the context of your life and environment. Just because someone scores relatively high or low does not necessarily mean that they suffer from depression. The PHQ-9 which this application uses is one of many tools commonly used by clinicians to help provide insight when used in conjunction with proper training and other assessments. Most clinicians do not rely on any one assessment because each individual is much more than a handful of proxy measures. 
+                                        <string key="text">It is important to understand that any score you get must be taken in the context of your life and environment. Just because someone scores relatively high or low does not necessarily mean that they suffer from depression. The PHQ-9 which this application uses is one of many tools commonly used by clinicians to help provide insight when used in conjunction with proper training and other assessments. Most clinicians do not rely on any one assessment because each individual is much more than a handful of proxy measures. 
 That being said, if your score has surprised or concerned you, first it is important that your score is not you. Even if you are suffering from upsetting thoughts and emotions associated with depression you will be ok as you work through this part of your life. Second, there are a lot of good technologies, both backed by evidence and readily available in both self-help and therapist-client methods. 
 And to be clear, I am not a licensed therapist. I cannot diagnose, nor offer aid past encouraging you to talk to a therapist if you are worried or suffering from depression. 
-</mutableString>
+</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
