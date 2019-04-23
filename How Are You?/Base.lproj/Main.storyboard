@@ -311,58 +311,60 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SkO-OO-j8f">
-                                <rect key="frame" x="0.0" y="10" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTy-GJ-FFG" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dlt-EL-WgB">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1618.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieM-LF-dSv">
-                                                <rect key="frame" x="125.5" y="16" width="124" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zw-lg-NoG">
+                                                <rect key="frame" x="125.5" y="32" width="124" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPM-T8-KbO">
-                                                <rect key="frame" x="8" y="61" width="359" height="760.5"/>
-                                                <string key="text">It is important to understand that any score you get must be taken in the context of your life and environment. Just because someone scores relatively high or low does not necessarily mean that they suffer from depression. The PHQ-9 which this application uses is one of many tools commonly used by clinicians to help provide insight when used in conjunction with proper training and other assessments. Most clinicians do not rely on any one assessment because each individual is much more than a handful of proxy measures. 
-That being said, if your score has surprised or concerned you, first it is important that your score is not you. Even if you are suffering from upsetting thoughts and emotions associated with depression you will be ok as you work through this part of your life. Second, there are a lot of good technologies, both backed by evidence and readily available in both self-help and therapist-client methods. 
-One of the best things you can do if you are worried you are suffering from depression is to talk to a licensed therapist. Talk to them about cognitive behavioral therapy (CBT), dialectical behavior therapy (DBT),  and acceptance and commitment therapy (ACT).
-CBT focuses on identify and changing unhealthy and unhelpful thought patterns and changing behaviors which are associated with the negative thoughts and is most effective at treatment of things like anxiety. DBT aims to validate current thought patterns while coaching patients to change unhealthy behaviors. This form of treatment is best used for those with suicidal thoughts. And ACT is a type of therapy that works to accept thoughts and emotions without judgment by separating yourself from what you think. Any of these type of therapy can be used by a therapist to help you overcome any of your challenges. 
-That being said, therapy is not always within the economic range of everyone, so if that is the case there are a lot of free options available to those who need help. Sites like Aunt Bertha and 2-1-1 can be used to locate in-patient mental healthcare providers in your area and free sites like ACT Mindfully can also be used. Apps like Headspace and Calm also practice mindfulness meditation which can be useful to those who struggle with anxiety and depression. 
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsh-nF-UqR">
+                                                <rect key="frame" x="24" y="85" width="327" height="1501.5"/>
+                                                <mutableString key="text">It is important to understand that any score you get must be taken in the context of your life and environment. Just because someone scores relatively high or low does not necessarily mean that they suffer from depression. The PHQ-9 which this application uses is one of many tools commonly used by clinicians to help provide insight when used in conjunction with proper training and other assessments. Most clinicians do not rely on any one assessment because each individual is much more than a handful of proxy measures. 
+That being said, if your score has surprised or concerned you, first it is important that your score is not you. Even if you are suffering from upsetting thoughts and emotions associated with depression you will be ok as you work through this part of your life. Second, there are a lot of good technologies, both backed by evidence and readily available in both self-help and therapist-client methods.  
+One of the best things you can do if you are worried you are suffering from depression is to talk to a licensed therapist. Talk to them about cognitive behavioral therapy (CBT), dialectical behavior therapy (DBT),  and acceptance and commitment therapy (ACT). 
+CBT focuses on identify and changing unhealthy and unhelpful thought patterns and changing behaviors which are associated with the negative thoughts and is most effective at treatment of things like anxiety. DBT aims to validate current thought patterns while coaching patients to change unhealthy behaviors. This form of treatment is best used for those with suicidal thoughts. And ACT is a type of therapy that works to accept thoughts and emotions without judgment by separating yourself from what you think. Any of these type of therapy can be used by a therapist to help you overcome any of your challenges.  
+That being said, therapy is not always within the economic range of everyone, so if that is the case there are a lot of free options available to those who need help. Sites like Aunt Bertha and 2-1-1 can be used to locate in-patient mental healthcare providers in your area and free sites like ACT Mindfully can also be used. Apps like Headspace and Calm also practice mindfulness meditation which can be useful to those who struggle with anxiety and depression.  
 Finally, if you are in crisis or having suicidal thoughts there is the 24 hour suicide hotline at 1-800-273-TALK and the Crisis Text Line by texting HOME to 741741. 
 And to be clear, I am not a licensed therapist. I cannot diagnose, nor offer aid past encouraging you to talk to a therapist if you are worried or suffering from depression. 
-</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="uPM-T8-KbO" firstAttribute="leading" secondItem="TTy-GJ-FFG" secondAttribute="leading" constant="8" id="Gch-02-Ivu"/>
-                                            <constraint firstAttribute="trailing" secondItem="uPM-T8-KbO" secondAttribute="trailing" constant="8" id="b8d-wY-qFG"/>
-                                            <constraint firstItem="ieM-LF-dSv" firstAttribute="top" secondItem="TTy-GJ-FFG" secondAttribute="top" constant="16" id="ePb-vz-wEV"/>
-                                            <constraint firstItem="uPM-T8-KbO" firstAttribute="top" secondItem="ieM-LF-dSv" secondAttribute="bottom" constant="24" id="lyF-8g-lJ5"/>
-                                            <constraint firstItem="ieM-LF-dSv" firstAttribute="centerX" secondItem="TTy-GJ-FFG" secondAttribute="centerX" id="pIP-uL-Zei"/>
+                                            <constraint firstAttribute="bottom" secondItem="Lsh-nF-UqR" secondAttribute="bottom" constant="32" id="6kn-Ql-n13"/>
+                                            <constraint firstItem="Lsh-nF-UqR" firstAttribute="top" secondItem="2zw-lg-NoG" secondAttribute="bottom" constant="32" id="BAE-3Y-Ysl"/>
+                                            <constraint firstItem="2zw-lg-NoG" firstAttribute="centerX" secondItem="dlt-EL-WgB" secondAttribute="centerX" id="EwX-zX-vGa"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lsh-nF-UqR" secondAttribute="trailing" constant="24" id="MqT-Iz-bzy"/>
+                                            <constraint firstItem="Lsh-nF-UqR" firstAttribute="leading" secondItem="dlt-EL-WgB" secondAttribute="leading" constant="24" id="NCP-8l-2Fd"/>
+                                            <constraint firstItem="2zw-lg-NoG" firstAttribute="top" secondItem="dlt-EL-WgB" secondAttribute="top" constant="32" id="pIL-WI-Kg5"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="TTy-GJ-FFG" firstAttribute="top" secondItem="SkO-OO-j8f" secondAttribute="top" id="99y-9V-gze"/>
-                                    <constraint firstAttribute="trailing" secondItem="TTy-GJ-FFG" secondAttribute="trailing" id="LdO-rR-8JW"/>
-                                    <constraint firstAttribute="bottom" secondItem="TTy-GJ-FFG" secondAttribute="bottom" id="Nl0-5v-1kL"/>
-                                    <constraint firstItem="TTy-GJ-FFG" firstAttribute="centerX" secondItem="SkO-OO-j8f" secondAttribute="centerX" id="UVs-rE-wx9"/>
-                                    <constraint firstItem="TTy-GJ-FFG" firstAttribute="leading" secondItem="SkO-OO-j8f" secondAttribute="leading" id="wz5-Vl-BTx"/>
+                                    <constraint firstItem="dlt-EL-WgB" firstAttribute="top" secondItem="SkO-OO-j8f" secondAttribute="top" id="1P4-xg-98N"/>
+                                    <constraint firstAttribute="bottom" secondItem="dlt-EL-WgB" secondAttribute="bottom" id="H1g-Ac-cZJ"/>
+                                    <constraint firstItem="dlt-EL-WgB" firstAttribute="leading" secondItem="SkO-OO-j8f" secondAttribute="leading" id="J7f-XW-k8o"/>
+                                    <constraint firstAttribute="trailing" secondItem="dlt-EL-WgB" secondAttribute="trailing" id="KJf-mE-Q39"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="SkO-OO-j8f" firstAttribute="top" secondItem="62t-qD-kZH" secondAttribute="top" id="1zG-2D-bwE"/>
+                            <constraint firstItem="SkO-OO-j8f" firstAttribute="leading" secondItem="62t-qD-kZH" secondAttribute="leading" id="5Ve-zn-ONj"/>
+                            <constraint firstItem="SkO-OO-j8f" firstAttribute="trailing" secondItem="62t-qD-kZH" secondAttribute="trailing" id="CQE-R9-zIJ"/>
+                            <constraint firstItem="dlt-EL-WgB" firstAttribute="height" secondItem="GpH-mK-Ao2" secondAttribute="height" priority="250" id="M3M-gb-dcu"/>
+                            <constraint firstItem="SkO-OO-j8f" firstAttribute="bottom" secondItem="62t-qD-kZH" secondAttribute="bottom" id="N82-h7-IPp"/>
                             <constraint firstItem="SkO-OO-j8f" firstAttribute="trailing" secondItem="62t-qD-kZH" secondAttribute="trailing" id="Xug-JH-Vdd"/>
-                            <constraint firstItem="TTy-GJ-FFG" firstAttribute="height" secondItem="62t-qD-kZH" secondAttribute="height" id="iZh-zK-lWU"/>
-                            <constraint firstItem="SkO-OO-j8f" firstAttribute="centerY" secondItem="GpH-mK-Ao2" secondAttribute="centerY" id="k6a-JR-Kho"/>
-                            <constraint firstItem="SkO-OO-j8f" firstAttribute="leading" secondItem="62t-qD-kZH" secondAttribute="leading" id="sIv-XC-N9n"/>
-                            <constraint firstItem="SkO-OO-j8f" firstAttribute="top" secondItem="GpH-mK-Ao2" secondAttribute="topMargin" constant="-10" id="wcP-Wp-OsQ"/>
+                            <constraint firstItem="dlt-EL-WgB" firstAttribute="width" secondItem="GpH-mK-Ao2" secondAttribute="width" id="wJX-T4-mpf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="62t-qD-kZH"/>
                     </view>
@@ -371,7 +373,7 @@ And to be clear, I am not a licensed therapist. I cannot diagnose, nor offer aid
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo8-dh-aFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380.625" y="888.38028169014081"/>
+            <point key="canvasLocation" x="380" y="888.30584707646187"/>
         </scene>
         <!--Survey-->
         <scene sceneID="PKv-hN-hkQ">
