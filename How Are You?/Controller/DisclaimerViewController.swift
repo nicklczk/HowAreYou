@@ -10,7 +10,14 @@ import UIKit
 
 class DisclaimerViewController : UIViewController {
     
+    @IBOutlet weak var disclaimerTextBodyLabel: UILabel!
+    
     @IBOutlet weak var continueButton: UIButton!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+    }
     
     @IBAction func continueButtonPressed(_ sender: Any) {
         /*Transition to the next VC.*/

@@ -25,24 +25,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISCLAIMER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xU-R6-NMg">
-                                        <rect key="frame" x="111" y="24" width="98" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISCLAIMER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6xU-R6-NMg">
+                                        <rect key="frame" x="96" y="24" width="128" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yk-jm-Ung">
-                                        <rect key="frame" x="8" y="69" width="304" height="403.5"/>
-                                        <string key="text">It is important to understand that any score you get must be taken in the context of your life and environment. Just because someone scores relatively high or low does not necessarily mean that they suffer from depression. The PHQ-9 which this application uses is one of many tools commonly used by clinicians to help provide insight when used in conjunction with proper training and other assessments. Most clinicians do not rely on any one assessment because each individual is much more than a handful of proxy measures. 
-That being said, if your score has surprised or concerned you, first it is important that your score is not you. Even if you are suffering from upsetting thoughts and emotions associated with depression you will be ok as you work through this part of your life. Second, there are a lot of good technologies, both backed by evidence and readily available in both self-help and therapist-client methods. 
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="3yk-jm-Ung">
+                                        <rect key="frame" x="8" y="84" width="304" height="397.5"/>
+                                        <mutableString key="text">It is important to understand that any score you get must be taken in the context of your life and environment. Just because someone scores relatively high or low does not necessarily mean that they suffer from depression. The PHQ-9 which this application uses is one of many tools commonly used by clinicians to help provide insight when used in conjunction with proper training and other assessments. Most clinicians do not rely on any one assessment because each individual is much more than a handful of proxy measures.  
+That being said, if your score has surprised or concerned you, first it is important that your score is not you. Even if you are suffering from upsetting thoughts and emotions associated with depression you will be ok as you work through this part of your life. Second, there are a lot of good technologies, both backed by evidence and readily available in both self-help and therapist-client methods.  
 And to be clear, I am not a licensed therapist. I cannot diagnose, nor offer aid past encouraging you to talk to a therapist if you are worried or suffering from depression. 
-</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyK-wj-FFy">
-                                        <rect key="frame" x="115.5" y="487.5" width="89" height="30"/>
+                                        <rect key="frame" x="99" y="496.5" width="122" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="I Understand"/>
                                         <connections>
                                             <action selector="continueButtonPressed:" destination="Lne-nU-BQM" eventType="touchUpInside" id="k3B-3C-t32"/>
@@ -53,6 +54,7 @@ And to be clear, I am not a licensed therapist. I cannot diagnose, nor offer aid
                                     <constraint firstItem="kyK-wj-FFy" firstAttribute="centerX" secondItem="zZs-p2-TBv" secondAttribute="centerX" id="49w-n5-hBq"/>
                                     <constraint firstItem="6xU-R6-NMg" firstAttribute="top" secondItem="zZs-p2-TBv" secondAttribute="top" constant="24" id="6vz-At-lm9"/>
                                     <constraint firstItem="3yk-jm-Ung" firstAttribute="centerX" secondItem="zZs-p2-TBv" secondAttribute="centerX" id="75Q-fn-0y3"/>
+                                    <constraint firstItem="kyK-wj-FFy" firstAttribute="width" secondItem="3yk-jm-Ung" secondAttribute="width" multiplier="0.4" id="90u-IR-Taq"/>
                                     <constraint firstItem="fZs-kc-hgm" firstAttribute="leading" secondItem="zZs-p2-TBv" secondAttribute="leading" id="FTC-SV-ZSl"/>
                                     <constraint firstAttribute="bottom" secondItem="fZs-kc-hgm" secondAttribute="bottom" id="TWf-WE-NlG"/>
                                     <constraint firstItem="fZs-kc-hgm" firstAttribute="top" secondItem="zZs-p2-TBv" secondAttribute="top" id="UI9-fe-uMa"/>
@@ -70,14 +72,17 @@ And to be clear, I am not a licensed therapist. I cannot diagnose, nor offer aid
                         <constraints>
                             <constraint firstItem="zZs-p2-TBv" firstAttribute="leading" secondItem="CL7-Do-oiQ" secondAttribute="leading" id="TIM-Tg-6cA"/>
                             <constraint firstItem="CL7-Do-oiQ" firstAttribute="trailing" secondItem="zZs-p2-TBv" secondAttribute="trailing" id="Vvt-Ym-wSc"/>
+                            <constraint firstItem="6xU-R6-NMg" firstAttribute="width" secondItem="CL7-Do-oiQ" secondAttribute="width" multiplier="0.4" id="Zfz-ef-hFW"/>
                             <constraint firstItem="fZs-kc-hgm" firstAttribute="height" secondItem="2r1-xA-Szf" secondAttribute="height" priority="250" id="lzU-mg-Qsd"/>
                             <constraint firstItem="zZs-p2-TBv" firstAttribute="top" secondItem="CL7-Do-oiQ" secondAttribute="top" id="w1Y-Hq-lx6"/>
                             <constraint firstItem="CL7-Do-oiQ" firstAttribute="bottom" secondItem="zZs-p2-TBv" secondAttribute="bottom" id="whT-HC-V5n"/>
+                            <constraint firstItem="3yk-jm-Ung" firstAttribute="height" secondItem="2r1-xA-Szf" secondAttribute="height" multiplier="0.7" id="zfq-6N-xSM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CL7-Do-oiQ"/>
                     </view>
                     <connections>
                         <outlet property="continueButton" destination="kyK-wj-FFy" id="BIw-TS-EqO"/>
+                        <outlet property="disclaimerTextBodyLabel" destination="3yk-jm-Ung" id="uRv-9p-iug"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1o-uR-vhr" userLabel="First Responder" sceneMemberID="firstResponder"/>
